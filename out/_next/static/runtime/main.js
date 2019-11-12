@@ -5131,7 +5131,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/n86ies/Documents/school/functional-programming/functional-programming-her/her/.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "/Users/n86ies/Documents/school/functional-programming/functional-programming-her/.next");
       return error;
     }
   };
