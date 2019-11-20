@@ -118,7 +118,6 @@ const WorldMap = () => {
 
   return (
     <div className="container">
-      <svg id="map" width="100%" height="100%" viewBox={viewBox} />
       <div className="overlay">
         <span>{loading ? "Het plaatje wordt voor u opgehaald.." : ""}</span>
         <div className={!loading && marker ? "content" : ""}>

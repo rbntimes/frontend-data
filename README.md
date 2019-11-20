@@ -1,6 +1,46 @@
-This project was bootstrapped with [Create Next App](https://github.com/segmentio/create-next-app).
+# Functional Programming
 
-Find the most recent version of this guide at [here](https://github.com/segmentio/create-next-app/blob/master/lib/templates/default/README.md). And check out [Next.js repo](https://github.com/zeit/next.js) for the most up-to-date info.
+Dit is mijn app voor Functional Programming.
+
+Ik heb er voor gekozen om mijn app met Next.js en d3 te maken. Ik wou dit doen omdat ik mij af vroeg hoe goed d3 en Next samen gaan omdat Next.js met React werkt en React niet altijd even lekker met D3 omgaat.
+
+De App is live te zien [hier]("https://google.com").
+
+## Werking
+
+Eerst teken ik een map met behulp van d3 en een grote gedownloade json blob met alle landen. Wanneer deze getekend heb geef ik het label mee
+
+Ik heb er voor gekozen om de volgende 2 query's te doen. Eerst query ik naar de database en check ik welke landen foto's hebben en hoeveel. Daarbij geef ik ook de termmaster van het land terug. De query ziet er alsvolgt uit:
+
+```
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX edm: <http://www.europeana.eu/schemas/edm/>
+PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX gn: <http://www.geonames.org/ontology#>
+
+SELECT ?countryLabel
+       (COUNT(?cho) AS ?choCount)
+WHERE {
+  <https://hdl.handle.net/20.500.11840/termmaster5929> skos:narrower* ?type .
+  ?cho edm:object ?type .
+
+  ?cho dct:spatial ?place . # obj place
+  ?place skos:exactMatch/gn:parentCountry ?country .
+  ?country gn:name ?countryLabel .
+
+} GROUP BY ?country ?countryLabel
+ORDER BY DESC(?choCount)
+```
+
+(AANPASSEN)
+
+En dat resulteerd in de volgende data:
+
+```
+{country: "Afghanistan", choCount: 999, termmaster: "hdl:blabla"}
+```
 
 ## Table of Contents
 
@@ -106,7 +146,7 @@ export default () => (
       }
     `}</style>
   </div>
-)
+);
 ```
 
 Read more about [Next's CSS features](https://github.com/zeit/next.js#css).
@@ -118,28 +158,28 @@ We recommend keeping React components in `./components` and they should look lik
 ### `./components/simple.js`
 
 ```jsx
-const Simple = () => <div>Simple Component</div>
+const Simple = () => <div>Simple Component</div>;
 
-export default Simple // don't forget to export default!
+export default Simple; // don't forget to export default!
 ```
 
 ### `./components/complex.js`
 
 ```jsx
-import { Component } from 'react'
+import { Component } from "react";
 
 class Complex extends Component {
   state = {
-    text: 'World'
-  }
+    text: "World"
+  };
 
   render() {
-    const { text } = this.state
-    return <div>Hello {text}</div>
+    const { text } = this.state;
+    return <div>Hello {text}</div>;
   }
 }
 
-export default Complex // don't forget to export default!
+export default Complex; // don't forget to export default!
 ```
 
 ## Fetching Data
@@ -149,16 +189,16 @@ You can fetch data in `pages` components using `getInitialProps` like this:
 ### `./pages/stars.js`
 
 ```jsx
-const Page = props => <div>Next stars: {props.stars}</div>
+const Page = props => <div>Next stars: {props.stars}</div>;
 
 Page.getInitialProps = async ({ req }) => {
-  const res = await fetch('https://api.github.com/repos/zeit/next.js')
-  const json = await res.json()
-  const stars = json.stargazers_count
-  return { stars }
-}
+  const res = await fetch("https://api.github.com/repos/zeit/next.js");
+  const json = await res.json();
+  const stars = json.stargazers_count;
+  return { stars };
+};
 
-export default Page
+export default Page;
 ```
 
 For the initial page load, `getInitialProps` will execute on the server only. `getInitialProps` will only be executed on the client when navigating to a different route via the `Link` component or using the routing APIs.
@@ -176,33 +216,33 @@ Typically you start your next server with `next start`. It's possible, however, 
 This example makes `/a` resolve to `./pages/b`, and `/b` resolve to `./pages/a`:
 
 ```jsx
-const { createServer } = require('http')
-const { parse } = require('url')
-const next = require('next')
+const { createServer } = require("http");
+const { parse } = require("url");
+const next = require("next");
 
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   createServer((req, res) => {
     // Be sure to pass `true` as the second argument to `url.parse`.
     // This tells it to parse the query portion of the URL.
-    const parsedUrl = parse(req.url, true)
-    const { pathname, query } = parsedUrl
+    const parsedUrl = parse(req.url, true);
+    const { pathname, query } = parsedUrl;
 
-    if (pathname === '/a') {
-      app.render(req, res, '/b', query)
-    } else if (pathname === '/b') {
-      app.render(req, res, '/a', query)
+    if (pathname === "/a") {
+      app.render(req, res, "/b", query);
+    } else if (pathname === "/b") {
+      app.render(req, res, "/a", query);
     } else {
-      handle(req, res, parsedUrl)
+      handle(req, res, parsedUrl);
     }
   }).listen(3000, err => {
-    if (err) throw err
-    console.log('> Ready on http://localhost:3000')
-  })
-})
+    if (err) throw err;
+    console.log("> Ready on http://localhost:3000");
+  });
+});
 ```
 
 Then, change your `start` script to `NODE_ENV=production node server.js`.

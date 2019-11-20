@@ -17,5 +17,5 @@ export function ZoomContainer({ children }) {
     return () => selection.on(".zoom", null);
   }, [svgElement]);
 
-  return <g transform={`translate(${x}, ${y}) scale(${k})`}>{children}</g>;
+  return <g id="map" transform={`translate(${x}, ${y}) scale(${k})`}>{children}</g>;
 }
