@@ -13,8 +13,10 @@ const projection = geoEquirectangular();
 const WorldMap = () => {
   const [land, setLand] = useState(undefined);
   const [marker, showMarker] = useState({});
+  const [loading, setLoading] = useState(false)
 
   const handleMarkerClick = value => {
+    setLoading(true);
     showMarker({ name: value.placeName.value, src: value.imageLink.value });
   };
 
@@ -36,7 +38,7 @@ const WorldMap = () => {
         .remove();
     }
 
-    return fetch(`/api/country?skos=${data.skos}&limit=${data.count}`)
+    return fetch(`/api/country?skos=${data.termmaster}&limit=${data.count}`)
       .then(results => results.json())
       .then(({ results }) => {
         setLand(country.properties.name);
@@ -58,7 +60,7 @@ const WorldMap = () => {
             "cy",
             d => projection([Number(d.long.value), Number(d.lat.value)])[1]
           )
-          .attr("r", 0.1)
+          .attr("r", 1)
           .attr("fill", "white")
           .on("click", d => handleMarkerClick(d));
       });
@@ -96,30 +98,16 @@ const WorldMap = () => {
                   ? "pointer"
                   : "not-allowed"
               )
-              .attr("fill", d => {
-                console.log(colour(data[d.properties.name]));
-                return colour(
+              .attr("fill", d => colour(
                   Object.keys(data).includes(d.properties.name)
                     ? data[d.properties.name].count
                     : 0
-                );
-              })
+                )
+              )
               .on("click", d => handleCountryClick(data[d.properties.name], d));
           });
       });
     });
-    // fetch("/api/getCountries")
-    //   .then(data => data.json())
-    //   .then(({ results }) => {
-    //     select("#map")
-    //       .append("g")
-    //       .selectAll("path")
-    //       .data(results.bindings)
-    //       .enter()
-    //       .append("path");
-    //
-    //     selectAll("path").attr("color", "red");
-    // });
   }, []);
 
   return (
@@ -128,7 +116,8 @@ const WorldMap = () => {
       <div>
         <h1>{land}</h1>
         <h2>{marker.name}</h2>
-        <img {...marker} />
+        <span>{loading ? "Het plaatje wordt voor u opgehaald.." : ''}</span>
+        <img style={{display: loading ? 'none': 'block'}} onLoad={loading ? () => setLoading(false) : () => {}} {...marker} />
       </div>
 
       <style jsx>

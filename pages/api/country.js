@@ -42,7 +42,6 @@ export default async (req, res) => {
     `${url}?query=${encodeURIComponent(query(req.query))}&format=json`
   );
   const data = await results.json();
-  console.log(data);
 
   res.end(JSON.stringify(data));
 };
