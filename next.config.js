@@ -5,14 +5,13 @@
 const debug = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  exportPathMap: function() {
+  exportPathMap() {
     return {
       "/": { page: "/" }
     };
-  },
-  //assetPrefix: '',
-  assetPrefix: !debug ? "/hoorcollege/" : "",
-  webpack: (config, { dev }) => {
+  }
+  // assetPrefix: '',
+  /* webpack: (config, { dev }) => {
     // Perform customizations to webpack config
     // console.log('webpack');
     // console.log(config.module.rules, dev);
@@ -24,7 +23,7 @@ module.exports = {
     });
     // Important: return the modified config
     return config;
-  } /*,
+  },
   webpackDevMiddleware: (config) => {
     // Perform customizations to webpack dev middleware config
     // console.log('webpackDevMiddleware');
