@@ -8,10 +8,16 @@ const Home = () => (
     <Head title="Home" />
     <Map />
 
-    <style jsx>
+    <style global jsx>
       {`
+        body {
+          margin: 0;
+          padding: 0;
+        }
         main {
           width: 100%;
+          max-height: 100vh;
+          overlay: hidden;
           color: #333;
           font-family: sans-serif;
         }

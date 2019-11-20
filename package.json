@@ -9,6 +9,7 @@
     "lint": "eslint --fix . && echo 'Lint complete.'"
   },
   "dependencies": {
+    "d3": "5.9.2",
     "d3-array": "1.0.1",
     "d3-geo": "^1.11.7",
     "d3-scale": "1.0.3",

@@ -6,14 +6,16 @@ import { min } from "d3-array";
 import { feature } from "topojson-client";
 import fetch from "isomorphic-unfetch";
 
-const viewBox = "0 0 959 460";
+const viewBoxWidth = 959;
+const viewBoxHeight = 460;
+const viewBox = `0 0 ${viewBoxWidth} ${viewBoxHeight}`;
 
 const projection = geoEquirectangular();
 
 const WorldMap = () => {
   const [land, setLand] = useState(undefined);
-  const [marker, showMarker] = useState({});
-  const [loading, setLoading] = useState(false)
+  const [marker, showMarker] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleMarkerClick = value => {
     setLoading(true);
@@ -21,17 +23,21 @@ const WorldMap = () => {
   };
 
   const handleCountryClick = (data, country) => {
+    if (!data) {
+      return;
+    }
     const currentViewBox = select("#map").attr("viewBox");
     const zoomIsActive = select("#map").attr("viewBox") !== viewBox;
 
     const clickedPath = select(d3Event.target).node();
     const boundingBox = clickedPath.getBBox();
 
-    const nextPath = `${boundingBox.x} ${boundingBox.y} ${boundingBox.width} ${boundingBox.height}`;
+    const nextViewbox = `${boundingBox.x} ${boundingBox.y} ${boundingBox.width} ${boundingBox.height}`;
+    const circleSize = (boundingBox.width % 959) / 100;
 
-    if (zoomIsActive && nextPath === currentViewBox) {
+    if (zoomIsActive && nextViewbox === currentViewBox) {
       setLand(undefined);
-      showMarker({});
+      showMarker(false);
       return select("#map")
         .attr("viewBox", viewBox)
         .selectAll("circle")
@@ -44,7 +50,7 @@ const WorldMap = () => {
         setLand(country.properties.name);
 
         select("#map")
-          .attr("viewBox", nextPath)
+          .attr("viewBox", nextViewbox)
           .append("g")
           .selectAll("circle")
           .data(results.bindings)
@@ -60,8 +66,10 @@ const WorldMap = () => {
             "cy",
             d => projection([Number(d.long.value), Number(d.lat.value)])[1]
           )
-          .attr("r", 1)
-          .attr("fill", "white")
+          .attr("r", circleSize)
+          .attr("fill", "blue")
+          .attr("stroke-width", circleSize / 2)
+          .attr("stroke", "white")
           .on("click", d => handleMarkerClick(d));
       });
   };
@@ -86,7 +94,7 @@ const WorldMap = () => {
             const colour = scaleLinear()
               .domain([min(Object.keys(data), d => data[d].count), 500])
               .clamp(true)
-              .range(["lightgrey", "black"]);
+              .range(["lightgrey", "red"]);
 
             selectAll("path")
               .attr("d", d => geoPath().projection(projection)(d))
@@ -112,20 +120,35 @@ const WorldMap = () => {
 
   return (
     <div className="container">
-      <svg id="map" width={800} height={450} viewBox={viewBox} />
-      <div>
-        <h1>{land}</h1>
-        <h2>{marker.name}</h2>
-        <span>{loading ? "Het plaatje wordt voor u opgehaald.." : ''}</span>
-        <img style={{display: loading ? 'none': 'block'}} onLoad={loading ? () => setLoading(false) : () => {}} {...marker} />
+      <svg id="map" width="100%" height="100%" viewBox={viewBox} />
+      <div className="overlay">
+        <span>{loading ? "Het plaatje wordt voor u opgehaald.." : ""}</span>
+        <div className={!loading && marker ? "content" : ""}>
+          <h1>{land}</h1>
+          <h2>{marker.name}</h2>
+          <img
+            style={{ display: loading ? "none" : "block" }}
+            onLoad={loading ? () => setLoading(false) : () => {}}
+            {...marker}
+          />
+        </div>
       </div>
 
       <style jsx>
         {`
-          .container {
-            display: grid;
-            grid-template-columns: 60% 40%;
-            grid-template-rows: 1fr 1fr 1fr;
+          #map {
+            max-height: 100vh;
+            max-width: 100vw;
+          }
+          .overlay {
+            position: absolute;
+            top: 0;
+            pointer-events: none;
+            height: 70%;
+          }
+          .content {
+            background: white;
+            padding: 20px;
           }
           img {
             width: 400px;
@@ -137,4 +160,17 @@ const WorldMap = () => {
   );
 };
 
-export default WorldMap;
+import {Stage} from './stage';
+import {ZoomContainer} from './ZoomContainer'
+
+function App() {
+  return (
+    <Stage width="100%" height={400}>
+      <ZoomContainer>
+        <WorldMap />
+      </ZoomContainer>
+    </Stage>
+  )
+}
+
+export default App;
