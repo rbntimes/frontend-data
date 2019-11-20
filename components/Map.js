@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { geoEquirectangular, geoPath } from "d3-geo";
-import { select, selectAll, event as d3Event } from "d3-selection";
-import { scaleLinear } from "d3-scale";
-import { min } from "d3-array";
+import * as d3 from 'd3'
 import { feature } from "topojson-client";
 import fetch from "isomorphic-unfetch";
-
+// https://codesandbox.io/s/creating-visualizations-with-d3-and-react-3ofdx
 const viewBoxWidth = 959;
 const viewBoxHeight = 460;
 const viewBox = `0 0 ${viewBoxWidth} ${viewBoxHeight}`;
@@ -26,10 +24,10 @@ const WorldMap = () => {
     if (!data) {
       return;
     }
-    const currentViewBox = select("#map").attr("viewBox");
-    const zoomIsActive = select("#map").attr("viewBox") !== viewBox;
+    const currentViewBox = d3.select("#map").attr("viewBox");
+    const zoomIsActive = d3.select("#map").attr("viewBox") !== viewBox;
 
-    const clickedPath = select(d3Event.target).node();
+    const clickedPath = d3.select(d3.event.target).node();
     const boundingBox = clickedPath.getBBox();
 
     const nextViewbox = `${boundingBox.x} ${boundingBox.y} ${boundingBox.width} ${boundingBox.height}`;
@@ -38,7 +36,7 @@ const WorldMap = () => {
     if (zoomIsActive && nextViewbox === currentViewBox) {
       setLand(undefined);
       showMarker(false);
-      return select("#map")
+      return d3.select("#map")
         .attr("viewBox", viewBox)
         .selectAll("circle")
         .remove();
@@ -49,7 +47,7 @@ const WorldMap = () => {
       .then(({ results }) => {
         setLand(country.properties.name);
 
-        select("#map")
+        d3.select("#map")
           .attr("viewBox", nextViewbox)
           .append("g")
           .selectAll("circle")
@@ -57,7 +55,7 @@ const WorldMap = () => {
           .enter()
           .append("circle");
 
-        selectAll("circle")
+        d3.selectAll("circle")
           .attr(
             "cx",
             d => projection([Number(d.long.value), Number(d.lat.value)])[0]
@@ -84,19 +82,19 @@ const WorldMap = () => {
         fetch("/api/getCountries")
           .then(data => data.json())
           .then(data => {
-            select("#map")
+            d3.select("#map")
               .append("g")
               .selectAll("path")
               .data(feature(worlddata, worlddata.objects.countries).features)
               .enter()
               .append("path");
 
-            const colour = scaleLinear()
-              .domain([min(Object.keys(data), d => data[d].count), 500])
+            const colour = d3.scaleLinear()
+              .domain([d3.min(Object.keys(data), d => data[d].count), 500])
               .clamp(true)
               .range(["lightgrey", "red"]);
 
-            selectAll("path")
+            d3.selectAll("path")
               .attr("d", d => geoPath().projection(projection)(d))
               .attr("stroke", "white")
               .attr("stroke-width", "0.2")
