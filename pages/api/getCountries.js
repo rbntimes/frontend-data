@@ -44,7 +44,7 @@ const query = `
   SELECT ?countryLabel ?landTM
   (COUNT(?cho) AS ?choCount)
   WHERE {
-    <https://hdl.handle.net/20.500.11840/termmaster5929> skos:narrower* ?type .
+    <https://hdl.handle.net/20.500.11840/termmaster15161> skos:narrower* ?type .
     ?cho edm:object ?type .
     ?cho dct:spatial ?place .
     ?place skos:exactMatch/gn:parentCountry ?country .

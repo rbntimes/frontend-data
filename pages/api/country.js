@@ -15,15 +15,20 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX gn: <http://www.geonames.org/ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dbo: <http://dbpedia.org/sparql/>
+PREFIX res: <http://dbpedia.org/resource/>
+
 
 SELECT * WHERE {
-     # SU
-     <${skos}> skos:narrower* ?place .
-     ?place skos:prefLabel ?placeName .
-
      # BEELDMATERIALEN
-     <https://hdl.handle.net/20.500.11840/termmaster5929> skos:narrower* ?type .
+     <https://hdl.handle.net/20.500.11840/termmaster15056> skos:narrower* ?type .
      ?type skos:prefLabel ?typeName .
+    ?cho dct:spatial ?place .
+    ?place skos:exactMatch/gn:parentCountry ?country .
+    ?place skos:exactMatch/gn:name ?placeLabel .
+    ?country gn:name ?countryLabel .
+    ?country rdfs:seeAlso ?countrySeeAlso .
+    ?place skos:exactMatch/rdfs:seeAlso ?placeSeeAlso .
 
      ?cho dct:spatial ?place ;
          edm:object ?type ;
@@ -32,7 +37,6 @@ SELECT * WHERE {
      ?place skos:exactMatch/wgs84:long ?long .
 }
 GROUP BY ?type
-LIMIT ${limit}
 `;
 
 export default async (req, res) => {
