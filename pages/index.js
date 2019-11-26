@@ -1,18 +1,8 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import Head from "../components/head";
 
-import { geoEquirectangular, geoPath } from "d3-geo";
-import * as d3 from "d3";
-import { feature } from "topojson-client";
-// import fetch from "isomorphic-unfetch";
-
 // https://codesandbox.io/s/creating-visualizations-with-d3-and-react-3ofdx
-const viewBoxWidth = 959;
-const viewBoxHeight = 460;
-const viewBox = `0 0 ${viewBoxWidth} ${viewBoxHeight}`;
-import distance from "./../components/distance";
 import { Stage } from "./../components/stage";
 import Sidebar from "./../components/Sidebar";
 import { ZoomContainer } from "./../components/ZoomContainer";
