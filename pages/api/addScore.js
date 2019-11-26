@@ -1,6 +1,6 @@
 export default async (req, res) => {
   const results = await fetch(
-    `https://ionized-protoceratops.glitch.me/addDream`,
+    `https://ionized-protoceratops.glitch.me/addScore`,
     {
       method: "POST",
       body: JSON.stringify({

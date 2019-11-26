@@ -1,62 +1,56 @@
 import React, { useState, useEffect } from "react";
-// import { select, event as d3Event } from "d3-selection"
 import * as d3 from "d3";
 import { useSvg } from "./stage";
-import { geoEquirectangular, geoPath } from "d3-geo";
-
-export function ZoomContainer({
-  children,
-  currentScore,
-  setScoreMultiplier,
-  setVisibleCoordinates
-}) {
+import { geoEquirectangular, geoPath, geoBounds } from "d3-geo";
+import { path } from "d3-path";
+const projection = geoEquirectangular();
+const d3Path = geoPath().projection(projection);
+export function ZoomContainer({ children, data, finished }) {
   const svgElement = useSvg();
   const projection = geoEquirectangular();
-  const [{ x, y, k }, setTransform] = useState({ x: 10, y: 10, k: 1 });
-  var width = 800,
-    height = 400,
-    Radius = 20;
+  const [{ x, y, k }, setTransform] = useState({ x: 0, y: 0, k: 1 });
 
-  function getVisibleArea(t) {
-    var l = t.invert([0, 0]),
-      r = t.invert([width, height]);
-    return {
-      l: [l[0], l[1]],
-      r: [r[0], r[1]]
-    };
-    return (
-      Math.trunc(l[0]) +
-      " x " +
-      Math.trunc(l[1]) +
-      "  -  " +
-      Math.trunc(r[0]) +
-      " x " +
-      Math.trunc(r[1])
-    );
+  if (data.distance) {
+    var width = 900,
+      height = 500;
+
+    const line = d3.select("line");
+
+    const coords = [
+        [Number(line.attr("x1")), Number(line.attr("y1"))],
+        [Number(line.attr("x2")), Number(line.attr("y2"))]
+      ],
+      dx = coords[1][0] - coords[0][0],
+      dy = coords[1][1] - coords[0][1],
+      xx = (coords[0][0] + coords[1][0]) / 2,
+      yy = (coords[0][1] + coords[1][1]) / 2,
+      scaleArray = [3, 0.9 / Math.max(dx / width, dy / height)],
+      scale = Math.min.apply(
+        null,
+        scaleArray.filter(number => number > 0)
+      ),
+      translate = [width / 2 - scale * xx, height / 2 - scale * yy];
+
+    d3.select("#map")
+      .transition(750)
+      .attr("transform", "translate(" + translate + ")scale(" + scale + ")");
+
+    line.style("stroke-width", Math.max(scale, 1) + "px");
+    d3.selectAll("circle")
+      .style("stroke-width", Math.max(scale, 1) + "px")
+      .attr("r", Math.max(scale, 1));
   }
 
   useEffect(() => {
-    if (!svgElement) return;
+    if (!svgElement || finished) return;
     const selection = d3.select(svgElement);
 
     const zoom = d3.zoom().on("zoom", function() {
       setTransform(d3.event.transform);
-      const score = Math.max(Math.floor(d3.event.transform.k - 1), 0);
-      if (score !== currentScore) {
-        setScoreMultiplier(Math.max(Math.floor(d3.event.transform.k - 1), 0));
-        setVisibleCoordinates(getVisibleArea(d3.event.transform));
-      }
     });
     selection.call(zoom);
     return () => selection.on(".zoom", null);
-  }, [
-    currentScore,
-    getVisibleArea,
-    projection,
-    setScoreMultiplier,
-    setVisibleCoordinates,
-    svgElement
-  ]);
+  }, [finished, projection, svgElement]);
 
   return (
     <g id="map" transform={`translate(${x}, ${y}) scale(${k})`}>

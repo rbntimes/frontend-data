@@ -7,13 +7,13 @@ const viewBoxHeight = 460;
 
 const viewBox = `0 0 ${viewBoxWidth} ${viewBoxHeight}`;
 
-export function Stage({ children }) {
+export function Stage({ children, width }) {
   const svgRef = useRef(null);
   const [svg, setSvg] = useState(null);
   useEffect(() => setSvg(svgRef.current), []);
 
   return (
-    <svg ref={svgRef} width="1020px" height={`calc(100vh)`} viewBox={viewBox}>
+    <svg ref={svgRef} width={width} height={`calc(100vh)`} viewBox={viewBox}>
       <Context.Provider value={svg}>{children}</Context.Provider>
       <style jsx>
         {`
