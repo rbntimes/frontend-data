@@ -43726,7 +43726,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(f
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!***************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fn86ies%2FDocuments%2Fschool%2Finformation-design%2Ffrontend-data%2Fpages%2Findex.js ***!
   \***************************************************************************************************************************************************************/
@@ -43749,5 +43749,5 @@ module.exports = dll_e9ad7d891b372a4221cf;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
