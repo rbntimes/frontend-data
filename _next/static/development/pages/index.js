@@ -64,7 +64,7 @@ function (_React$Component) {
       console.log("mount");
       var map = d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#map"); // First create the world
 
-      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10___default()("/static/custom.geo.json").then(function (response) {
+      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10___default()("/frontend-data/static/custom.geo.json").then(function (response) {
         if (response.status !== 200) {
           console.log("There was a problem: ".concat(response.status));
           return;
