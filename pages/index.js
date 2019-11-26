@@ -131,14 +131,9 @@ Home.getInitialProps = async function() {
     `${API_URL}?query=${encodeURIComponent(API_QUERY)}&format=json`
   );
   const apiData = await res.json();
-  const mapFeatures = await fetch(
-    "http://localhost:3000/static/custom.geo.json"
-  );
-  const map = await mapFeatures.json();
 
   return {
-    randomPlace: apiData.results.bindings,
-    mapFeatures: map
+    randomPlace: apiData.results.bindings
   };
 };
 
