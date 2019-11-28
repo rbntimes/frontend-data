@@ -9,27 +9,29 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var d3_geo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! d3-geo */ "./node_modules/d3-geo/src/index.js");
-/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
-/* harmony import */ var topojson_client__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! topojson-client */ "./node_modules/topojson-client/src/index.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _distance__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./distance */ "./components/distance.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var d3_geo__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! d3-geo */ "./node_modules/d3-geo/src/index.js");
+/* harmony import */ var d3__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! d3 */ "./node_modules/d3/index.js");
+/* harmony import */ var topojson_client__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! topojson-client */ "./node_modules/topojson-client/src/index.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _distance__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./distance */ "./components/distance.js");
 
 
 
 
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
 
 
@@ -38,20 +40,20 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
  // https://codesandbox.io/s/creating-visualizations-with-d3-and-react-3ofdx
 
 
-var projection = Object(d3_geo__WEBPACK_IMPORTED_MODULE_7__["geoEquirectangular"])();
+var projection = Object(d3_geo__WEBPACK_IMPORTED_MODULE_8__["geoEquirectangular"])();
 
 var Map =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Map, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Map, _React$Component);
 
   function Map() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Map);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Map);
 
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Map).apply(this, arguments));
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Map).apply(this, arguments));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Map, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Map, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this = this;
@@ -60,19 +62,19 @@ function (_React$Component) {
           marker = _this$props.marker,
           onSubmit = _this$props.onSubmit,
           userClickCoordinations = _this$props.userClickCoordinations,
-          randomPlaceCoordinations = _this$props.randomPlaceCoordinations;
-      console.log("mount");
-      var map = d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#map"); // First create the world
+          randomPlaceCoordinations = _this$props.randomPlaceCoordinations,
+          scoreData = _this$props.scoreData;
+      var map = d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#map"); // First create the world
 
-      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_10___default()("/frontend-data/static/custom.geo.json").then(function (response) {
+      isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_11___default()("".concat( false ? undefined : "/", "static/custom.geo.json")).then(function (response) {
         if (response.status !== 200) {
-          console.log("There was a problem: ".concat(response.status));
+          console.log("Kan de map niet ladem: ".concat(response.status));
           return;
         }
 
         response.json().then(function (worlddata) {
-          map.append("g").selectAll("path").data(Object(topojson_client__WEBPACK_IMPORTED_MODULE_9__["feature"])(worlddata, worlddata.objects.countries).features).enter().append("path").attr("d", function (d) {
-            return Object(d3_geo__WEBPACK_IMPORTED_MODULE_7__["geoPath"])().projection(projection)(d);
+          map.append("g").selectAll("path").data(Object(topojson_client__WEBPACK_IMPORTED_MODULE_10__["feature"])(worlddata, worlddata.objects.countries).features).enter().append("path").attr("d", function (d) {
+            return Object(d3_geo__WEBPACK_IMPORTED_MODULE_8__["geoPath"])().projection(projection)(d);
           }).attr("stroke", "white").attr("stroke-width", "0.2").attr("id", function (d) {
             return d.properties.name;
           }); // const colour = d3
@@ -81,10 +83,8 @@ function (_React$Component) {
           //   .clamp(true)
           //   .range(["lightgrey", "red"]);
 
+          map.append("g").attr("id", "lines");
           map.append("g").attr("id", "markers");
-
-          _this.drawMarker(marker);
-
           map.on("click", function () {
             return _this.handleClick();
           });
@@ -94,12 +94,12 @@ function (_React$Component) {
   }, {
     key: "handleClick",
     value: function handleClick() {
-      var map = d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#map");
+      var map = d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#map");
       var _this$props2 = this.props,
           marker = _this$props2.marker,
           onSubmit = _this$props2.onSubmit; // Fill color of clicked country depending on answer
 
-      var clickedCountry = d3__WEBPACK_IMPORTED_MODULE_8__["select"](d3__WEBPACK_IMPORTED_MODULE_8__["event"].target);
+      var clickedCountry = d3__WEBPACK_IMPORTED_MODULE_9__["select"](d3__WEBPACK_IMPORTED_MODULE_9__["event"].target);
       var userGuessedCountry = clickedCountry.attr("id") === marker[0].landLabel.value;
 
       if (userGuessedCountry) {
@@ -107,46 +107,100 @@ function (_React$Component) {
         clickedCountry.attr("fill", "green");
       } else {
         clickedCountry.attr("fill", "red");
-        d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#".concat(marker[0].landLabel.value)).attr("fill", "green");
+        d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#".concat(marker[0].landLabel.value)).attr("fill", "green");
       } // Use clientPoint to check where user clicked and invert it againt projection
       // https://stackoverflow.com/questions/48083536/react-v16-d3-v4-when-using-mouse-from-d3-selection-will-get-typeerror-cannot
 
 
-      var userClickCoordinations = projection.invert(d3__WEBPACK_IMPORTED_MODULE_8__["clientPoint"](d3__WEBPACK_IMPORTED_MODULE_8__["event"].target, d3__WEBPACK_IMPORTED_MODULE_8__["event"]));
-      var randomPlaceCoordinations = projection.invert([d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#randomplace").attr("cx"), d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#randomplace").attr("cy")]); // Drawing line between coordinates of mouseclick and the marker randomly fetched from server
+      var userClickCoordinations = projection.invert(d3__WEBPACK_IMPORTED_MODULE_9__["clientPoint"](d3__WEBPACK_IMPORTED_MODULE_9__["event"].target, d3__WEBPACK_IMPORTED_MODULE_9__["event"]));
+      this.drawMarker([].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(this.props.marker), [{
+        id: "answer",
+        lat: userClickCoordinations[1],
+        "long": userClickCoordinations[0]
+      }]));
+      var randomPlaceCoordinations = projection.invert([d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#randomplace").attr("cx"), d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#randomplace").attr("cy")]); // Drawing line between coordinates of mouseclick and the marker randomly fetched from server
       // https://stackoverflow.com/questions/43945356/drawing-line-between-two-projected-points-on-map-no-line-showing-d3-js
 
-      map.select("#markers").data(userClickCoordinations).insert("line", "#randomplace").attr("x1", projection([Number(userClickCoordinations[0]), Number(userClickCoordinations[1])])[0]).attr("y1", projection([Number(userClickCoordinations[0]), Number(userClickCoordinations[1])])[1]).attr("x2", projection([Number(randomPlaceCoordinations[0]), Number(randomPlaceCoordinations[1])])[0]).attr("y2", projection([Number(randomPlaceCoordinations[0]), Number(randomPlaceCoordinations[1])])[1]).attr("stroke", "blue").attr("stroke-width", 2).attr("fill", "none"); // Also add marker on top of where user pressed
-
-      map.select("#markers").append("circle").attr("id", "answer").attr("fill", "blue").attr("stroke-width", 2 / 2).attr("stroke", "white").attr("cx", projection([Number(userClickCoordinations[0]), Number(userClickCoordinations[1])])[0]).attr("cy", projection([Number(userClickCoordinations[0]), Number(userClickCoordinations[1])])[1]).attr("r", 2);
+      map.select("#markers").data(userClickCoordinations).insert("line", "#randomplace").attr("x1", projection([Number(userClickCoordinations[0]), Number(userClickCoordinations[1])])[0]).attr("y1", projection([Number(userClickCoordinations[0]), Number(userClickCoordinations[1])])[1]).attr("x2", projection([Number(randomPlaceCoordinations[0]), Number(randomPlaceCoordinations[1])])[0]).attr("y2", projection([Number(randomPlaceCoordinations[0]), Number(randomPlaceCoordinations[1])])[1]).attr("stroke", "blue").attr("stroke-width", 2).attr("fill", "none");
       return onSubmit({
+        cho: marker[0].cho.value.split("/")[marker[0].cho.value.split("/").length - 1],
         finished: true,
         userClickCoordinations: userClickCoordinations,
         randomPlaceCoordinations: randomPlaceCoordinations,
         correctCountry: marker[0].landLabel.value,
-        guessedCountry: d3__WEBPACK_IMPORTED_MODULE_8__["select"](d3__WEBPACK_IMPORTED_MODULE_8__["event"].target).attr("id"),
-        distance: Object(_distance__WEBPACK_IMPORTED_MODULE_11__["default"])(userClickCoordinations[0], userClickCoordinations[1], randomPlaceCoordinations[0], randomPlaceCoordinations[1], "M"),
+        guessedCountry: d3__WEBPACK_IMPORTED_MODULE_9__["select"](d3__WEBPACK_IMPORTED_MODULE_9__["event"].target).attr("id"),
+        distance: Object(_distance__WEBPACK_IMPORTED_MODULE_12__["default"])(userClickCoordinations[0], userClickCoordinations[1], randomPlaceCoordinations[0], randomPlaceCoordinations[1], "M"),
         userGuessedCountry: userGuessedCountry
       });
     }
   }, {
+    key: "getPlaceCoordinates",
+    value: function getPlaceCoordinates(id) {
+      return projection.invert([d3__WEBPACK_IMPORTED_MODULE_9__["select"](id).attr("cx"), d3__WEBPACK_IMPORTED_MODULE_9__["select"](id).attr("cy")]);
+    }
+  }, {
+    key: "drawLines",
+    value: function drawLines(scoreData) {
+      var _this2 = this;
+
+      var randomPlaceCoordinations = projection.invert([d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#randomplace").attr("cx"), d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#randomplace").attr("cy")]);
+      d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#lines").selectAll("line").data(scoreData).enter().append("line").attr("x1", function (_ref) {
+        var id = _ref.id;
+        var select = d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#id_".concat(id));
+
+        if (!select.empty()) {
+          return projection([_this2.getPlaceCoordinates("#id_".concat(id))[0], _this2.getPlaceCoordinates("#id_".concat(id))[1]])[0];
+        }
+
+        return 0;
+      }).attr("y1", function (_ref2) {
+        var id = _ref2.id;
+        var select = d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#id_".concat(id));
+
+        if (!select.empty()) {
+          return projection([_this2.getPlaceCoordinates("#id_".concat(id))[0], _this2.getPlaceCoordinates("#id_".concat(id))[1]])[1];
+        }
+
+        return 0;
+      }).attr("x2", projection([Number(randomPlaceCoordinations[0]), Number(randomPlaceCoordinations[1])])[0]).attr("y2", projection([Number(randomPlaceCoordinations[0]), Number(randomPlaceCoordinations[1])])[1]).attr("id", function (_ref3) {
+        var id = _ref3.id;
+        return "line_".concat(id);
+      }).attr("stroke", "grey").attr("stroke-width", 1).attr("fill", "none");
+    }
+  }, {
     key: "drawMarker",
     value: function drawMarker(marker) {
-      d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#markers").selectAll("circle").data(marker).enter().append("circle").attr("id", "randomplace").attr("cx", function (d) {
-        return projection([Number(d["long"].value), Number(d.lat.value)])[0];
-      }).attr("cy", function (d) {
-        return projection([Number(d["long"].value), Number(d.lat.value)])[1];
-      }).attr("r", 2).attr("fill", "blue").attr("stroke-width", 2 / 2).attr("stroke", "white");
+      return d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#markers").selectAll("circle").data(marker).enter().append("circle").attr("id", function (_ref4) {
+        var id = _ref4.id;
+        return !id ? "randomplace" : "id_".concat(id);
+      }).attr("cx", function (_ref5) {
+        var id = _ref5.id,
+            _long = _ref5["long"],
+            lat = _ref5.lat;
+        return projection([Number(id ? _long : _long.value), Number(id ? lat : lat.value)])[0];
+      }).attr("cy", function (_ref6) {
+        var id = _ref6.id,
+            _long2 = _ref6["long"],
+            lat = _ref6.lat;
+        return projection([Number(id ? _long2 : _long2.value), Number(id ? lat : lat.value)])[1];
+      }).attr("r", 2).attr("fill", function (_ref7) {
+        var id = _ref7.id;
+        return !id ? "green" : "blue";
+      }).attr("opacity", function () {
+        return 1;
+      }).attr("stroke-width", 2 / 2).attr("stroke", "white").append("svg:title").text(function (d) {
+        return d.username;
+      });
     }
   }, {
     key: "resetMap",
     value: function resetMap() {
-      var _this2 = this;
+      var _this3 = this;
 
-      d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#markers").selectAll("*").remove();
-      d3__WEBPACK_IMPORTED_MODULE_8__["selectAll"]("path").attr("fill", "black");
-      d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#map").on("click", function () {
-        return _this2.handleClick();
+      d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#markers").selectAll("*").remove();
+      d3__WEBPACK_IMPORTED_MODULE_9__["selectAll"]("path").attr("fill", "black");
+      d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#map").on("click", function () {
+        return _this3.handleClick();
       });
     }
   }, {
@@ -154,10 +208,13 @@ function (_React$Component) {
     value: function shouldComponentUpdate(nextProps) {
       if (nextProps.data.distance === null && nextProps.data.submitted) {
         this.resetMap();
-        this.drawMarker(nextProps.marker);
         return true;
+      } else if (nextProps.comparingScores) {
+        this.drawMarker(nextProps.scoreData);
+        this.drawLines(nextProps.scoreData);
+        return false;
       } else if (nextProps.data.finished) {
-        return d3__WEBPACK_IMPORTED_MODULE_8__["select"]("#map").on("click", null);
+        d3__WEBPACK_IMPORTED_MODULE_9__["select"]("#map").on("click", null);
         return false;
       }
 
@@ -166,16 +223,15 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return __jsx(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null);
+      return __jsx(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null);
     }
   }]);
 
   return Map;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
 Map.propTypes = {
-  onSubmit: prop_types__WEBPACK_IMPORTED_MODULE_6__["PropTypes"].func,
-  marker: prop_types__WEBPACK_IMPORTED_MODULE_6__["PropTypes"].shape
+  onSubmit: prop_types__WEBPACK_IMPORTED_MODULE_7__["PropTypes"].func
 };
 /* harmony default export */ __webpack_exports__["default"] = (Map);
 
@@ -190,150 +246,211 @@ Map.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
-
-
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/next/dist/build/polyfills/fetch.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3__);
 
 var _jsxFileName = "/Users/n86ies/Documents/school/information-design/frontend-data/components/Results.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
 var Results = function Results(_ref) {
-  var newEntry = _ref.newEntry;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_4__["useState"])([]),
-      results = _useState[0],
-      setResults = _useState[1];
-
-  Object(react__WEBPACK_IMPORTED_MODULE_4__["useEffect"])(function () {
-    function getData() {
-      return _getData.apply(this, arguments);
-    }
-
-    function _getData() {
-      _getData = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
-      /*#__PURE__*/
-      _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-        var res, data;
-        return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.next = 2;
-                return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()("https://ionized-protoceratops.glitch.me/getScores");
-
-              case 2:
-                res = _context.sent;
-                _context.next = 5;
-                return res.json();
-
-              case 5:
-                data = _context.sent;
-                setResults([].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(data), [{
-                  username: "Jouw naam hier",
-                  score: newEntry
-                }]).sort(function (x, y) {
-                  return x.score - y.score;
-                }));
-
-              case 7:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      }));
-      return _getData.apply(this, arguments);
-    }
-
-    getData();
-  }, [newEntry]);
-  return __jsx("table", {
-    className: "jsx-1579328533",
+  var newEntry = _ref.newEntry,
+      scoreData = _ref.scoreData,
+      choSpecificHighscores = _ref.choSpecificHighscores;
+  var results = [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(scoreData), [newEntry]).sort(function (x, y) {
+    return x.score - y.score;
+  });
+  var choSpecificHighscoresResults = [].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(choSpecificHighscores), [newEntry]).sort(function (x, y) {
+    return x.score - y.score;
+  });
+  return __jsx("div", {
+    className: "jsx-2497013987" + " " + "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 13
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, __jsx("h4", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, "Top 5 (alle foto's)"), __jsx("table", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
     },
     __self: this
   }, __jsx("thead", {
-    className: "jsx-1579328533",
+    className: "jsx-2497013987",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 17
     },
     __self: this
   }, __jsx("tr", {
-    className: "jsx-1579328533",
+    className: "jsx-2497013987",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 18
     },
     __self: this
   }, __jsx("td", {
-    className: "jsx-1579328533",
+    className: "jsx-2497013987",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 19
     },
     __self: this
   }, "Username:"), __jsx("td", {
-    className: "jsx-1579328533",
+    className: "jsx-2497013987",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 20
     },
     __self: this
   }, "Score:"))), __jsx("tbody", {
-    className: "jsx-1579328533",
+    className: "jsx-2497013987",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 23
     },
     __self: this
-  }, results.map(function (_ref2) {
+  }, results.slice(0, 5).map(function (_ref2) {
     var username = _ref2.username,
         score = _ref2.score;
     return score && __jsx("tr", {
       style: {
-        color: username === "Jouw naam hier" ? "red" : "black"
+        color: username === newEntry.username ? "red" : "black"
       },
       key: Math.random(),
-      className: "jsx-1579328533",
+      className: "jsx-2497013987",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 27
       },
       __self: this
     }, __jsx("td", {
-      className: "jsx-1579328533",
+      className: "jsx-2497013987",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 33
       },
       __self: this
     }, username), __jsx("td", {
-      className: "jsx-1579328533",
+      className: "jsx-2497013987",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 34
       },
       __self: this
     }, score));
-  })), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    id: "1579328533",
+  })))), __jsx("div", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
     __self: this
-  }, "body{margin:0;padding:0;}div{width:100%;max-height:100vh;overlay:hidden;color:#333;font-family:sans-serif;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9uODZpZXMvRG9jdW1lbnRzL3NjaG9vbC9pbmZvcm1hdGlvbi1kZXNpZ24vZnJvbnRlbmQtZGF0YS9jb21wb25lbnRzL1Jlc3VsdHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBK0NTLEFBR3NCLEFBSUUsU0FIRCxFQUlPLFFBSG5CLFNBSWlCLGVBQ0osV0FDWSx1QkFDekIiLCJmaWxlIjoiL1VzZXJzL244Nmllcy9Eb2N1bWVudHMvc2Nob29sL2luZm9ybWF0aW9uLWRlc2lnbi9mcm9udGVuZC1kYXRhL2NvbXBvbmVudHMvUmVzdWx0cy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSwgdXNlRWZmZWN0IH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgZmV0Y2ggZnJvbSBcImlzb21vcnBoaWMtdW5mZXRjaFwiO1xuXG5jb25zdCBSZXN1bHRzID0gKHsgbmV3RW50cnkgfSkgPT4ge1xuICBjb25zdCBbcmVzdWx0cywgc2V0UmVzdWx0c10gPSB1c2VTdGF0ZShbXSk7XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBhc3luYyBmdW5jdGlvbiBnZXREYXRhKCkge1xuICAgICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goXG4gICAgICAgIFwiaHR0cHM6Ly9pb25pemVkLXByb3RvY2VyYXRvcHMuZ2xpdGNoLm1lL2dldFNjb3Jlc1wiXG4gICAgICApO1xuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlcy5qc29uKCk7XG5cbiAgICAgIHNldFJlc3VsdHMoXG4gICAgICAgIFsuLi5kYXRhLCB7IHVzZXJuYW1lOiBcIkpvdXcgbmFhbSBoaWVyXCIsIHNjb3JlOiBuZXdFbnRyeSB9XS5zb3J0KFxuICAgICAgICAgICh4LCB5KSA9PiB4LnNjb3JlIC0geS5zY29yZVxuICAgICAgICApXG4gICAgICApO1xuICAgIH1cbiAgICBnZXREYXRhKCk7XG4gIH0sIFtuZXdFbnRyeV0pO1xuXG4gIHJldHVybiAoXG4gICAgPHRhYmxlPlxuICAgICAgPHRoZWFkPlxuICAgICAgICA8dHI+XG4gICAgICAgICAgPHRkPlVzZXJuYW1lOjwvdGQ+XG4gICAgICAgICAgPHRkPlNjb3JlOjwvdGQ+XG4gICAgICAgIDwvdHI+XG4gICAgICA8L3RoZWFkPlxuICAgICAgPHRib2R5PlxuICAgICAgICB7cmVzdWx0cy5tYXAoXG4gICAgICAgICAgKHsgdXNlcm5hbWUsIHNjb3JlIH0pID0+XG4gICAgICAgICAgICBzY29yZSAmJiAoXG4gICAgICAgICAgICAgIDx0clxuICAgICAgICAgICAgICAgIHN0eWxlPXt7XG4gICAgICAgICAgICAgICAgICBjb2xvcjogdXNlcm5hbWUgPT09IFwiSm91dyBuYWFtIGhpZXJcIiA/IFwicmVkXCIgOiBcImJsYWNrXCJcbiAgICAgICAgICAgICAgICB9fVxuICAgICAgICAgICAgICAgIGtleT17TWF0aC5yYW5kb20oKX1cbiAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIDx0ZD57dXNlcm5hbWV9PC90ZD5cbiAgICAgICAgICAgICAgICA8dGQ+e3Njb3JlfTwvdGQ+XG4gICAgICAgICAgICAgIDwvdHI+XG4gICAgICAgICAgICApXG4gICAgICAgICl9XG4gICAgICA8L3Rib2R5PlxuICAgICAgPHN0eWxlIGdsb2JhbCBqc3g+XG4gICAgICAgIHtgXG4gICAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgIH1cbiAgICAgICAgICBkaXYge1xuICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICBtYXgtaGVpZ2h0OiAxMDB2aDtcbiAgICAgICAgICAgIG92ZXJsYXk6IGhpZGRlbjtcbiAgICAgICAgICAgIGNvbG9yOiAjMzMzO1xuICAgICAgICAgICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgICAgICAgfVxuICAgICAgICBgfVxuICAgICAgPC9zdHlsZT5cbiAgICA8L3RhYmxlPlxuICApO1xufTtcblxuZXhwb3J0IGRlZmF1bHQgUmVzdWx0cztcbiJdfQ== */\n/*@ sourceURL=/Users/n86ies/Documents/school/information-design/frontend-data/components/Results.js */"));
+  }, __jsx("h4", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, "Highscores deze foto:"), __jsx("table", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, __jsx("thead", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, __jsx("tr", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, __jsx("td", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, "Username:"), __jsx("td", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, "Score:"))), __jsx("tbody", {
+    className: "jsx-2497013987",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }, choSpecificHighscoresResults.map(function (_ref3) {
+    var username = _ref3.username,
+        score = _ref3.score;
+    return score && __jsx("tr", {
+      style: {
+        color: username === newEntry.username ? "red" : "black"
+      },
+      key: Math.random(),
+      className: "jsx-2497013987",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }, __jsx("td", {
+      className: "jsx-2497013987",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, username), __jsx("td", {
+      className: "jsx-2497013987",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    }, score));
+  })))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    id: "2497013987",
+    __self: this
+  }, "container.jsx-2497013987{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9uODZpZXMvRG9jdW1lbnRzL3NjaG9vbC9pbmZvcm1hdGlvbi1kZXNpZ24vZnJvbnRlbmQtZGF0YS9jb21wb25lbnRzL1Jlc3VsdHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBb0VTLEFBRzBCLDBFQUNmIiwiZmlsZSI6Ii9Vc2Vycy9uODZpZXMvRG9jdW1lbnRzL3NjaG9vbC9pbmZvcm1hdGlvbi1kZXNpZ24vZnJvbnRlbmQtZGF0YS9jb21wb25lbnRzL1Jlc3VsdHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlU3RhdGUsIHVzZUVmZmVjdCB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IGZldGNoIGZyb20gXCJpc29tb3JwaGljLXVuZmV0Y2hcIjtcblxuY29uc3QgUmVzdWx0cyA9ICh7IG5ld0VudHJ5LCBzY29yZURhdGEsIGNob1NwZWNpZmljSGlnaHNjb3JlcyB9KSA9PiB7XG4gIGNvbnN0IHJlc3VsdHMgPSBbLi4uc2NvcmVEYXRhLCBuZXdFbnRyeV0uc29ydCgoeCwgeSkgPT4geC5zY29yZSAtIHkuc2NvcmUpO1xuXG4gIGNvbnN0IGNob1NwZWNpZmljSGlnaHNjb3Jlc1Jlc3VsdHMgPSBbXG4gICAgLi4uY2hvU3BlY2lmaWNIaWdoc2NvcmVzLFxuICAgIG5ld0VudHJ5XG4gIF0uc29ydCgoeCwgeSkgPT4geC5zY29yZSAtIHkuc2NvcmUpO1xuXG4gIHJldHVybiAoXG4gICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXJcIj5cbiAgICAgIDxkaXY+XG4gICAgICAgIDxoND5Ub3AgNSAoYWxsZSBmb3RvJ3MpPC9oND5cbiAgICAgICAgPHRhYmxlPlxuICAgICAgICAgIDx0aGVhZD5cbiAgICAgICAgICAgIDx0cj5cbiAgICAgICAgICAgICAgPHRkPlVzZXJuYW1lOjwvdGQ+XG4gICAgICAgICAgICAgIDx0ZD5TY29yZTo8L3RkPlxuICAgICAgICAgICAgPC90cj5cbiAgICAgICAgICA8L3RoZWFkPlxuICAgICAgICAgIDx0Ym9keT5cbiAgICAgICAgICAgIHtyZXN1bHRzLnNsaWNlKDAsIDUpLm1hcChcbiAgICAgICAgICAgICAgKHsgdXNlcm5hbWUsIHNjb3JlIH0pID0+XG4gICAgICAgICAgICAgICAgc2NvcmUgJiYgKFxuICAgICAgICAgICAgICAgICAgPHRyXG4gICAgICAgICAgICAgICAgICAgIHN0eWxlPXt7XG4gICAgICAgICAgICAgICAgICAgICAgY29sb3I6IHVzZXJuYW1lID09PSBuZXdFbnRyeS51c2VybmFtZSA/IFwicmVkXCIgOiBcImJsYWNrXCJcbiAgICAgICAgICAgICAgICAgICAgfX1cbiAgICAgICAgICAgICAgICAgICAga2V5PXtNYXRoLnJhbmRvbSgpfVxuICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICA8dGQ+e3VzZXJuYW1lfTwvdGQ+XG4gICAgICAgICAgICAgICAgICAgIDx0ZD57c2NvcmV9PC90ZD5cbiAgICAgICAgICAgICAgICAgIDwvdHI+XG4gICAgICAgICAgICAgICAgKVxuICAgICAgICAgICAgKX1cbiAgICAgICAgICA8L3Rib2R5PlxuICAgICAgICA8L3RhYmxlPlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2PlxuICAgICAgICA8aDQ+SGlnaHNjb3JlcyBkZXplIGZvdG86PC9oND5cbiAgICAgICAgPHRhYmxlPlxuICAgICAgICAgIDx0aGVhZD5cbiAgICAgICAgICAgIDx0cj5cbiAgICAgICAgICAgICAgPHRkPlVzZXJuYW1lOjwvdGQ+XG4gICAgICAgICAgICAgIDx0ZD5TY29yZTo8L3RkPlxuICAgICAgICAgICAgPC90cj5cbiAgICAgICAgICA8L3RoZWFkPlxuICAgICAgICAgIDx0Ym9keT5cbiAgICAgICAgICAgIHtjaG9TcGVjaWZpY0hpZ2hzY29yZXNSZXN1bHRzLm1hcChcbiAgICAgICAgICAgICAgKHsgdXNlcm5hbWUsIHNjb3JlIH0pID0+XG4gICAgICAgICAgICAgICAgc2NvcmUgJiYgKFxuICAgICAgICAgICAgICAgICAgPHRyXG4gICAgICAgICAgICAgICAgICAgIHN0eWxlPXt7XG4gICAgICAgICAgICAgICAgICAgICAgY29sb3I6IHVzZXJuYW1lID09PSBuZXdFbnRyeS51c2VybmFtZSA/IFwicmVkXCIgOiBcImJsYWNrXCJcbiAgICAgICAgICAgICAgICAgICAgfX1cbiAgICAgICAgICAgICAgICAgICAga2V5PXtNYXRoLnJhbmRvbSgpfVxuICAgICAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgICAgICA8dGQ+e3VzZXJuYW1lfTwvdGQ+XG4gICAgICAgICAgICAgICAgICAgIDx0ZD57c2NvcmV9PC90ZD5cbiAgICAgICAgICAgICAgICAgIDwvdHI+XG4gICAgICAgICAgICAgICAgKVxuICAgICAgICAgICAgKX1cbiAgICAgICAgICA8L3Rib2R5PlxuICAgICAgICA8L3RhYmxlPlxuICAgICAgPC9kaXY+XG4gICAgICA8c3R5bGUganN4PlxuICAgICAgICB7YFxuICAgICAgICAgIGNvbnRhaW5lciB7XG4gICAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgIH1cbiAgICAgICAgYH1cbiAgICAgIDwvc3R5bGU+XG4gICAgPC9kaXY+XG4gICk7XG59O1xuXG5leHBvcnQgZGVmYXVsdCBSZXN1bHRzO1xuIl19 */\n/*@ sourceURL=/Users/n86ies/Documents/school/information-design/frontend-data/components/Results.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Results);
@@ -355,10 +472,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Results__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Results */ "./components/Results.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Results__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Results */ "./components/Results.js");
 var _jsxFileName = "/Users/n86ies/Documents/school/information-design/frontend-data/components/Sidebar.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 
@@ -370,26 +490,42 @@ var Sidebar = function Sidebar(_ref) {
       handleForm = _ref.handleForm,
       username = _ref.username,
       setUsername = _ref.setUsername,
-      setLoading = _ref.setLoading;
+      setLoading = _ref.setLoading,
+      comparingScores = _ref.comparingScores,
+      scoreData = _ref.scoreData,
+      onSubmit = _ref.onSubmit,
+      setComparingScores = _ref.setComparingScores,
+      choSpecificHighscores = _ref.choSpecificHighscores;
+  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["useRouter"])();
+
+  var handleReset = function handleReset() {
+    setComparingScores();
+    onSubmit({
+      distance: null,
+      submitted: true
+    });
+    return router.replace("/");
+  };
+
   return __jsx("aside", {
-    className: "jsx-3922870053" + " " + "overlay",
+    className: "jsx-1047011017" + " " + "overlay",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 29
     },
     __self: this
   }, __jsx("h1", {
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 30
     },
     __self: this
   }, "Waar zou de volgende foto gemaakt zijn?"), __jsx("p", {
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 31
     },
     __self: this
   }, "Weet jij waar de volgende afbeelding genomen is, klik op de goeie plek op de map"), __jsx("img", {
@@ -400,55 +536,62 @@ var Sidebar = function Sidebar(_ref) {
       return setLoading(false);
     } : function () {},
     src: randomPlace[0].img.value,
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 35
     },
     __self: this
-  }), data.distance ? __jsx("form", {
+  }), !data.distance ? __jsx("span", {
+    className: "jsx-1047011017",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }) : data.distance && !comparingScores ? __jsx("form", {
     onSubmit: function onSubmit(e) {
       return e.preventDefault();
     },
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 43
     },
     __self: this
   }, __jsx("h1", {
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 44
     },
     __self: this
   }, "Jouw score: ", data.distance, "km"), __jsx("h4", {
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 45
     },
     __self: this
   }, "Jij gokte: ", data.guessedCountry), __jsx("h4", {
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 46
     },
     __self: this
   }, "De foto is genomen in: ", data.correctCountry), __jsx("div", {
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 47
     },
     __self: this
   }, __jsx("label", {
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 48
     },
     __self: this
   }, __jsx("input", {
@@ -456,33 +599,63 @@ var Sidebar = function Sidebar(_ref) {
     onChange: function onChange(e) {
       return setUsername(e.target.value);
     },
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 49
     },
     __self: this
   })), __jsx("button", {
     onClick: function onClick() {
       return handleForm("/");
     },
-    className: "jsx-3922870053",
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 54
     },
     __self: this
-  }, "Submit"))) : null, __jsx(_Results__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    newEntry: data.distance,
+  }, "Submit"))) : __jsx("a", {
+    onClick: function onClick() {
+      return handleReset();
+    },
+    className: "jsx-1047011017",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 58
+    },
+    __self: this
+  }, "Opnieuw spelen? Klik hier"), comparingScores ? __jsx(_Results__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    choSpecificHighscores: choSpecificHighscores,
+    scoreData: scoreData,
+    comparingScores: comparingScores,
+    newEntry: {
+      score: data.distance,
+      username: username
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }) : !comparingScores && data.finished ? __jsx("span", {
+    className: "jsx-1047011017",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: this
+  }) : __jsx("span", {
+    className: "jsx-1047011017",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
     },
     __self: this
   }), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-    id: "3922870053",
+    id: "1047011017",
     __self: this
-  }, "aside.jsx-3922870053{height:96vh;overflow:scroll;}body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,Avenir Next,Avenir, Helvetica,sans-serif;}form.jsx-3922870053>div.jsx-3922870053{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9uODZpZXMvRG9jdW1lbnRzL3NjaG9vbC9pbmZvcm1hdGlvbi1kZXNpZ24vZnJvbnRlbmQtZGF0YS9jb21wb25lbnRzL1NpZGViYXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBMkNPLEFBR3VCLEFBSUgsQUFNSSxTQUxILEdBSk0sT0FNTyxTQUx6Qiw4Q0FTQSwrQkFIQSIsImZpbGUiOiIvVXNlcnMvbjg2aWVzL0RvY3VtZW50cy9zY2hvb2wvaW5mb3JtYXRpb24tZGVzaWduL2Zyb250ZW5kLWRhdGEvY29tcG9uZW50cy9TaWRlYmFyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IExpbmsgZnJvbSBcIm5leHQvbGlua1wiO1xuXG5pbXBvcnQgUmVzdWx0cyBmcm9tIFwiLi9SZXN1bHRzXCI7XG5cbmNvbnN0IFNpZGViYXIgPSAoe1xuICBkYXRhLFxuICBsb2FkaW5nLFxuICByYW5kb21QbGFjZSxcbiAgaGFuZGxlRm9ybSxcbiAgdXNlcm5hbWUsXG4gIHNldFVzZXJuYW1lLFxuICBzZXRMb2FkaW5nXG59KSA9PiAoXG4gIDxhc2lkZSBjbGFzc05hbWU9XCJvdmVybGF5XCI+XG4gICAgPGgxPldhYXIgem91IGRlIHZvbGdlbmRlIGZvdG8gZ2VtYWFrdCB6aWpuPzwvaDE+XG4gICAgPHA+XG4gICAgICBXZWV0IGppaiB3YWFyIGRlIHZvbGdlbmRlIGFmYmVlbGRpbmcgZ2Vub21lbiBpcywga2xpayBvcCBkZSBnb2VpZSBwbGVrIG9wXG4gICAgICBkZSBtYXBcbiAgICA8L3A+XG4gICAgPGltZ1xuICAgICAgc3R5bGU9e3sgZGlzcGxheTogbG9hZGluZyA/IFwibm9uZVwiIDogXCJibG9ja1wiIH19XG4gICAgICBvbkxvYWQ9e2xvYWRpbmcgPyAoKSA9PiBzZXRMb2FkaW5nKGZhbHNlKSA6ICgpID0+IHt9fVxuICAgICAgc3JjPXtyYW5kb21QbGFjZVswXS5pbWcudmFsdWV9XG4gICAgLz5cbiAgICB7ZGF0YS5kaXN0YW5jZSA/IChcbiAgICAgIDxmb3JtIG9uU3VibWl0PXtlID0+IGUucHJldmVudERlZmF1bHQoKX0+XG4gICAgICAgIDxoMT5Kb3V3IHNjb3JlOiB7ZGF0YS5kaXN0YW5jZX1rbTwvaDE+XG4gICAgICAgIDxoND5KaWogZ29rdGU6IHtkYXRhLmd1ZXNzZWRDb3VudHJ5fTwvaDQ+XG4gICAgICAgIDxoND5EZSBmb3RvIGlzIGdlbm9tZW4gaW46IHtkYXRhLmNvcnJlY3RDb3VudHJ5fTwvaDQ+XG4gICAgICAgIDxkaXY+XG4gICAgICAgICAgPGxhYmVsPlxuICAgICAgICAgICAgPGlucHV0XG4gICAgICAgICAgICAgIHBsYWNlaG9sZGVyPVwiVXNlcm5hbWVcIlxuICAgICAgICAgICAgICBvbkNoYW5nZT17ZSA9PiBzZXRVc2VybmFtZShlLnRhcmdldC52YWx1ZSl9XG4gICAgICAgICAgICAvPlxuICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiBoYW5kbGVGb3JtKFwiL1wiKX0+U3VibWl0PC9idXR0b24+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9mb3JtPlxuICAgICkgOiBudWxsfVxuICAgIDxSZXN1bHRzIG5ld0VudHJ5PXtkYXRhLmRpc3RhbmNlfSAvPlxuICAgIDxzdHlsZSBqc3g+XG4gICAgICB7YFxuICAgICAgICBhc2lkZSB7XG4gICAgICAgICAgaGVpZ2h0OiA5NnZoO1xuICAgICAgICAgIG92ZXJmbG93OiBzY3JvbGw7XG4gICAgICAgIH1cbiAgICAgICAgOmdsb2JhbChib2R5KSB7XG4gICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgQXZlbmlyIE5leHQsIEF2ZW5pcixcbiAgICAgICAgICAgIEhlbHZldGljYSwgc2Fucy1zZXJpZjtcbiAgICAgICAgfVxuICAgICAgICBmb3JtID4gZGl2IHtcbiAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICB9XG4gICAgICBgfVxuICAgIDwvc3R5bGU+XG4gIDwvYXNpZGU+XG4pO1xuXG5leHBvcnQgZGVmYXVsdCBTaWRlYmFyO1xuIl19 */\n/*@ sourceURL=/Users/n86ies/Documents/school/information-design/frontend-data/components/Sidebar.js */"));
+  }, "aside.jsx-1047011017{height:96vh;overflow:scroll;}body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,Avenir Next,Avenir, Helvetica,sans-serif;}form.jsx-1047011017>div.jsx-1047011017{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9uODZpZXMvRG9jdW1lbnRzL3NjaG9vbC9pbmZvcm1hdGlvbi1kZXNpZ24vZnJvbnRlbmQtZGF0YS9jb21wb25lbnRzL1NpZGViYXIuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBd0VTLEFBR3lCLEFBSUgsQUFNSSxTQUxILEdBSk0sT0FNTyxTQUx6Qiw4Q0FTQSwrQkFIQSIsImZpbGUiOiIvVXNlcnMvbjg2aWVzL0RvY3VtZW50cy9zY2hvb2wvaW5mb3JtYXRpb24tZGVzaWduL2Zyb250ZW5kLWRhdGEvY29tcG9uZW50cy9TaWRlYmFyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IExpbmsgZnJvbSBcIm5leHQvbGlua1wiO1xuaW1wb3J0IHsgdXNlUm91dGVyIH0gZnJvbSBcIm5leHQvcm91dGVyXCI7XG5cbmltcG9ydCBSZXN1bHRzIGZyb20gXCIuL1Jlc3VsdHNcIjtcblxuY29uc3QgU2lkZWJhciA9ICh7XG4gIGRhdGEsXG4gIGxvYWRpbmcsXG4gIHJhbmRvbVBsYWNlLFxuICBoYW5kbGVGb3JtLFxuICB1c2VybmFtZSxcbiAgc2V0VXNlcm5hbWUsXG4gIHNldExvYWRpbmcsXG4gIGNvbXBhcmluZ1Njb3JlcyxcbiAgc2NvcmVEYXRhLFxuICBvblN1Ym1pdCxcbiAgc2V0Q29tcGFyaW5nU2NvcmVzLFxuICBjaG9TcGVjaWZpY0hpZ2hzY29yZXNcbn0pID0+IHtcbiAgY29uc3Qgcm91dGVyID0gdXNlUm91dGVyKCk7XG5cbiAgY29uc3QgaGFuZGxlUmVzZXQgPSAoKSA9PiB7XG4gICAgc2V0Q29tcGFyaW5nU2NvcmVzKCk7XG4gICAgb25TdWJtaXQoeyBkaXN0YW5jZTogbnVsbCwgc3VibWl0dGVkOiB0cnVlIH0pO1xuICAgIHJldHVybiByb3V0ZXIucmVwbGFjZShcIi9cIik7XG4gIH07XG4gIHJldHVybiAoXG4gICAgPGFzaWRlIGNsYXNzTmFtZT1cIm92ZXJsYXlcIj5cbiAgICAgIDxoMT5XYWFyIHpvdSBkZSB2b2xnZW5kZSBmb3RvIGdlbWFha3Qgemlqbj88L2gxPlxuICAgICAgPHA+XG4gICAgICAgIFdlZXQgamlqIHdhYXIgZGUgdm9sZ2VuZGUgYWZiZWVsZGluZyBnZW5vbWVuIGlzLCBrbGlrIG9wIGRlIGdvZWllIHBsZWtcbiAgICAgICAgb3AgZGUgbWFwXG4gICAgICA8L3A+XG4gICAgICA8aW1nXG4gICAgICAgIHN0eWxlPXt7IGRpc3BsYXk6IGxvYWRpbmcgPyBcIm5vbmVcIiA6IFwiYmxvY2tcIiB9fVxuICAgICAgICBvbkxvYWQ9e2xvYWRpbmcgPyAoKSA9PiBzZXRMb2FkaW5nKGZhbHNlKSA6ICgpID0+IHt9fVxuICAgICAgICBzcmM9e3JhbmRvbVBsYWNlWzBdLmltZy52YWx1ZX1cbiAgICAgIC8+XG4gICAgICB7IWRhdGEuZGlzdGFuY2UgPyAoXG4gICAgICAgIDxzcGFuIC8+XG4gICAgICApIDogZGF0YS5kaXN0YW5jZSAmJiAhY29tcGFyaW5nU2NvcmVzID8gKFxuICAgICAgICA8Zm9ybSBvblN1Ym1pdD17ZSA9PiBlLnByZXZlbnREZWZhdWx0KCl9PlxuICAgICAgICAgIDxoMT5Kb3V3IHNjb3JlOiB7ZGF0YS5kaXN0YW5jZX1rbTwvaDE+XG4gICAgICAgICAgPGg0PkppaiBnb2t0ZToge2RhdGEuZ3Vlc3NlZENvdW50cnl9PC9oND5cbiAgICAgICAgICA8aDQ+RGUgZm90byBpcyBnZW5vbWVuIGluOiB7ZGF0YS5jb3JyZWN0Q291bnRyeX08L2g0PlxuICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICA8bGFiZWw+XG4gICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgIHBsYWNlaG9sZGVyPVwiVXNlcm5hbWVcIlxuICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXtlID0+IHNldFVzZXJuYW1lKGUudGFyZ2V0LnZhbHVlKX1cbiAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICA8YnV0dG9uIG9uQ2xpY2s9eygpID0+IGhhbmRsZUZvcm0oXCIvXCIpfT5TdWJtaXQ8L2J1dHRvbj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9mb3JtPlxuICAgICAgKSA6IChcbiAgICAgICAgPGEgb25DbGljaz17KCkgPT4gaGFuZGxlUmVzZXQoKX0+T3BuaWV1dyBzcGVsZW4/IEtsaWsgaGllcjwvYT5cbiAgICAgICl9XG4gICAgICB7Y29tcGFyaW5nU2NvcmVzID8gKFxuICAgICAgICA8UmVzdWx0c1xuICAgICAgICAgIGNob1NwZWNpZmljSGlnaHNjb3Jlcz17Y2hvU3BlY2lmaWNIaWdoc2NvcmVzfVxuICAgICAgICAgIHNjb3JlRGF0YT17c2NvcmVEYXRhfVxuICAgICAgICAgIGNvbXBhcmluZ1Njb3Jlcz17Y29tcGFyaW5nU2NvcmVzfVxuICAgICAgICAgIG5ld0VudHJ5PXt7IHNjb3JlOiBkYXRhLmRpc3RhbmNlLCB1c2VybmFtZSB9fVxuICAgICAgICAvPlxuICAgICAgKSA6ICFjb21wYXJpbmdTY29yZXMgJiYgZGF0YS5maW5pc2hlZCA/IChcbiAgICAgICAgPHNwYW4gLz5cbiAgICAgICkgOiAoXG4gICAgICAgIDxzcGFuIC8+XG4gICAgICApfVxuICAgICAgPHN0eWxlIGpzeD5cbiAgICAgICAge2BcbiAgICAgICAgICBhc2lkZSB7XG4gICAgICAgICAgICBoZWlnaHQ6IDk2dmg7XG4gICAgICAgICAgICBvdmVyZmxvdzogc2Nyb2xsO1xuICAgICAgICAgIH1cbiAgICAgICAgICA6Z2xvYmFsKGJvZHkpIHtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCBBdmVuaXIgTmV4dCwgQXZlbmlyLFxuICAgICAgICAgICAgICBIZWx2ZXRpY2EsIHNhbnMtc2VyaWY7XG4gICAgICAgICAgfVxuICAgICAgICAgIGZvcm0gPiBkaXYge1xuICAgICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICB9XG4gICAgICAgIGB9XG4gICAgICA8L3N0eWxlPlxuICAgIDwvYXNpZGU+XG4gICk7XG59O1xuXG5leHBvcnQgZGVmYXVsdCBTaWRlYmFyO1xuIl19 */\n/*@ sourceURL=/Users/n86ies/Documents/school/information-design/frontend-data/components/Sidebar.js */"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Sidebar);
@@ -515,7 +688,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var projection = Object(d3_geo__WEBPACK_IMPORTED_MODULE_3__["geoEquirectangular"])();
 var d3Path = Object(d3_geo__WEBPACK_IMPORTED_MODULE_3__["geoPath"])().projection(projection);
 function ZoomContainer(_ref) {
-  var children = _ref.children,
+  var comparingScores = _ref.comparingScores,
+      children = _ref.children,
       data = _ref.data,
       finished = _ref.finished;
   var svgElement = Object(_stage__WEBPACK_IMPORTED_MODULE_2__["useSvg"])();
@@ -532,7 +706,7 @@ function ZoomContainer(_ref) {
       k = _useState$.k,
       setTransform = _useState[1];
 
-  if (data.distance) {
+  if (data.distance && !comparingScores) {
     var width = 900,
         height = 500;
     var line = d3__WEBPACK_IMPORTED_MODULE_1__["select"]("line");
@@ -549,10 +723,15 @@ function ZoomContainer(_ref) {
     d3__WEBPACK_IMPORTED_MODULE_1__["select"]("#map").transition(750).attr("transform", "translate(" + translate + ")scale(" + scale + ")");
     line.style("stroke-width", Math.max(scale, 1) + "px");
     d3__WEBPACK_IMPORTED_MODULE_1__["selectAll"]("circle").style("stroke-width", Math.max(scale, 1) + "px").attr("r", Math.max(scale, 1));
-  }
+  } // if (comparingScores) {
+  //   d3.select("#map")
+  //     .transition(750)
+  //     .attr("transform", "translate(0, 0) scale(1)");
+  // }
+
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (!svgElement || finished) return;
+    if (!svgElement || finished && !comparingScores) return;
     var selection = d3__WEBPACK_IMPORTED_MODULE_1__["select"](svgElement);
     var zoom = d3__WEBPACK_IMPORTED_MODULE_1__["zoom"]().on("zoom", function () {
       setTransform(d3__WEBPACK_IMPORTED_MODULE_1__["event"].transform);
@@ -561,13 +740,13 @@ function ZoomContainer(_ref) {
     return function () {
       return selection.on(".zoom", null);
     };
-  }, [finished, projection, svgElement]);
+  }, [comparingScores, finished, projection, svgElement]);
   return __jsx("g", {
     id: "map",
     transform: "translate(".concat(x, ", ").concat(y, ") scale(").concat(k, ")"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 62
     },
     __self: this
   }, children);
@@ -43543,12 +43722,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
+/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/asyncToGenerator */ "./node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -43573,9 +43752,9 @@ var _jsxFileName = "/Users/n86ies/Documents/school/information-design/frontend-d
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement;
 
-function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_5___default()(object); if (_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default.a) { var symbols = _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_8___default()(object); if (_babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default.a) { var symbols = _babel_runtime_corejs2_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_4___default()(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(source).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_6__["default"])(target, key, source[key]); }); } else if (_babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default.a) { _babel_runtime_corejs2_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_1___default()(target, _babel_runtime_corejs2_core_js_object_get_own_property_descriptors__WEBPACK_IMPORTED_MODULE_2___default()(source)); } else { ownKeys(source).forEach(function (key) { _babel_runtime_corejs2_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(target, key, _babel_runtime_corejs2_core_js_object_get_own_property_descriptor__WEBPACK_IMPORTED_MODULE_3___default()(source, key)); }); } } return target; }
 
 
 
@@ -43584,11 +43763,17 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 
+ // https://stackoverflow.com/a/30707423
 
+function jsonToQueryString(json) {
+  return "?" + _babel_runtime_corejs2_core_js_object_keys__WEBPACK_IMPORTED_MODULE_8___default()(json).map(function (key) {
+    return encodeURIComponent(key) + "=" + encodeURIComponent(json[key]);
+  }).join("&");
+}
 
 var Home = function Home(_ref) {
-  var randomPlace = _ref.randomPlace;
-  var router = Object(next_router__WEBPACK_IMPORTED_MODULE_11__["useRouter"])();
+  var randomPlace = _ref.randomPlace,
+      scoreData = _ref.scoreData;
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(true),
       loading = _useState[0],
@@ -43598,48 +43783,94 @@ var Home = function Home(_ref) {
       username = _useState2[0],
       setUsername = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])({
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])(false),
+      comparingScores = _useState3[0],
+      _setComparingScores = _useState3[1];
+
+  var _useState4 = Object(react__WEBPACK_IMPORTED_MODULE_10__["useState"])({
     distance: null
   }),
-      data = _useState3[0],
-      _onSubmit = _useState3[1];
+      data = _useState4[0],
+      _onSubmit = _useState4[1];
 
-  var handleForm = function handleForm() {
-    try {
-      fetch("/api/addScore?distance=".concat(data.distance, "&username=").concat(username)).then(function (data) {
-        return data.json();
-      }).then(function (response) {
-        if (response.message === "success") {
-          _onSubmit({
-            distance: null,
-            submitted: true
-          });
+  var handleForm =
+  /*#__PURE__*/
+  function () {
+    var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__["default"])(
+    /*#__PURE__*/
+    _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_5___default.a.mark(function _callee() {
+      var rawResponse, content;
+      return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_5___default.a.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return fetch("https://ionized-protoceratops.glitch.me/addScore".concat(jsonToQueryString({
+                username: username,
+                score: data.distance,
+                cho: data.cho,
+                "long": data.userClickCoordinations[0],
+                lat: data.userClickCoordinations[1]
+              })), {
+                method: "POST",
+                headers: {
+                  Accept: "application/json",
+                  "Content-Type": "application/json"
+                }
+              });
 
-          return router.replace("/");
-        } else {
-          return _onSubmit(_objectSpread({}, data));
+            case 2:
+              rawResponse = _context.sent;
+              _context.next = 5;
+              return rawResponse.json();
+
+            case 5:
+              content = _context.sent;
+
+              if (!(content.message === "success")) {
+                _context.next = 10;
+                break;
+              }
+
+              _setComparingScores(true);
+
+              _context.next = 11;
+              break;
+
+            case 10:
+              return _context.abrupt("return", _onSubmit(_objectSpread({}, data)));
+
+            case 11:
+            case "end":
+              return _context.stop();
+          }
         }
-      });
-    } catch (e) {
-      console.log(e, "error");
-    }
-  };
+      }, _callee);
+    }));
+
+    return function handleForm() {
+      return _ref2.apply(this, arguments);
+    };
+  }();
 
   return __jsx("main", {
     className: styled_jsx_style__WEBPACK_IMPORTED_MODULE_9___default.a.dynamic([["3421518405", [data.distance ? "2fr" : "1fr"]]]) + " " + "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 57
     },
     __self: this
   }, __jsx(_components_head__WEBPACK_IMPORTED_MODULE_12__["default"], {
     title: "Home",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 58
     },
     __self: this
   }), __jsx(_components_Sidebar__WEBPACK_IMPORTED_MODULE_14__["default"], {
+    onSubmit: _onSubmit,
+    scoreData: scoreData,
+    comparingScores: comparingScores,
     data: data,
     setLoading: _setLoading,
     loading: loading,
@@ -43647,9 +43878,16 @@ var Home = function Home(_ref) {
     handleForm: handleForm,
     username: username,
     setUsername: setUsername,
+    choSpecificHighscores: scoreData.filter(function (_ref3) {
+      var cho = _ref3.cho;
+      return Number(randomPlace[0].cho.value.split("/")[randomPlace[0].cho.value.split("/").length - 1]) === cho;
+    }),
+    setComparingScores: function setComparingScores() {
+      return _setComparingScores(!comparingScores);
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 59
     },
     __self: this
   }), __jsx(_components_stage__WEBPACK_IMPORTED_MODULE_13__["Stage"], {
@@ -43657,18 +43895,24 @@ var Home = function Home(_ref) {
     height: 400,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 80
     },
     __self: this
   }, __jsx(_components_ZoomContainer__WEBPACK_IMPORTED_MODULE_15__["ZoomContainer"], {
+    comparingScores: comparingScores,
     data: data,
     finished: data.distance !== null,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 81
     },
     __self: this
   }, __jsx(_components_Map__WEBPACK_IMPORTED_MODULE_16__["default"], {
+    scoreData: scoreData.filter(function (_ref4) {
+      var cho = _ref4.cho;
+      return Number(randomPlace[0].cho.value.split("/")[randomPlace[0].cho.value.split("/").length - 1]) === cho;
+    }),
+    comparingScores: comparingScores,
     data: data,
     onSubmit: function onSubmit(data) {
       return _onSubmit(data);
@@ -43679,14 +43923,14 @@ var Home = function Home(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 86
     },
     __self: this
   }))), __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_9___default.a, {
     id: "3421518405",
     dynamic: [data.distance ? "2fr" : "1fr"],
     __self: this
-  }, ".container{display:grid;grid-template-columns:".concat(data.distance ? "2fr" : "1fr", " 4fr;}.overlay{padding:12px;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.content{background:white;}img{height:200px;}body{margin:0;padding:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9uODZpZXMvRG9jdW1lbnRzL3NjaG9vbC9pbmZvcm1hdGlvbi1kZXNpZ24vZnJvbnRlbmQtZGF0YS9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF3RFMsQUFHMEIsQUFJQSxBQU1JLEFBR0osQUFHSixTQUNDLElBaEI2QyxBQUl2QyxBQVNsQixJQUhBLEVBT0EsVUFaZSx1Q0FKZixtQ0FLd0IsOEVBQ3hCIiwiZmlsZSI6Ii9Vc2Vycy9uODZpZXMvRG9jdW1lbnRzL3NjaG9vbC9pbmZvcm1hdGlvbi1kZXNpZ24vZnJvbnRlbmQtZGF0YS9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHsgdXNlUm91dGVyIH0gZnJvbSBcIm5leHQvcm91dGVyXCI7XG5pbXBvcnQgSGVhZCBmcm9tIFwiLi4vY29tcG9uZW50cy9oZWFkXCI7XG5cbi8vIGh0dHBzOi8vY29kZXNhbmRib3guaW8vcy9jcmVhdGluZy12aXN1YWxpemF0aW9ucy13aXRoLWQzLWFuZC1yZWFjdC0zb2ZkeFxuaW1wb3J0IHsgU3RhZ2UgfSBmcm9tIFwiLi8uLi9jb21wb25lbnRzL3N0YWdlXCI7XG5pbXBvcnQgU2lkZWJhciBmcm9tIFwiLi8uLi9jb21wb25lbnRzL1NpZGViYXJcIjtcbmltcG9ydCB7IFpvb21Db250YWluZXIgfSBmcm9tIFwiLi8uLi9jb21wb25lbnRzL1pvb21Db250YWluZXJcIjtcbmltcG9ydCBXb3JsZE1hcCBmcm9tIFwiLi8uLi9jb21wb25lbnRzL01hcFwiO1xuXG5jb25zdCBIb21lID0gKHsgcmFuZG9tUGxhY2UgfSkgPT4ge1xuICBjb25zdCByb3V0ZXIgPSB1c2VSb3V0ZXIoKTtcbiAgY29uc3QgW2xvYWRpbmcsIHNldExvYWRpbmddID0gdXNlU3RhdGUodHJ1ZSk7XG4gIGNvbnN0IFt1c2VybmFtZSwgc2V0VXNlcm5hbWVdID0gdXNlU3RhdGUodW5kZWZpbmVkKTtcbiAgY29uc3QgW2RhdGEsIG9uU3VibWl0XSA9IHVzZVN0YXRlKHsgZGlzdGFuY2U6IG51bGwgfSk7XG4gIGNvbnN0IGhhbmRsZUZvcm0gPSAoKSA9PiB7XG4gICAgdHJ5IHtcbiAgICAgIGZldGNoKGAvYXBpL2FkZFNjb3JlP2Rpc3RhbmNlPSR7ZGF0YS5kaXN0YW5jZX0mdXNlcm5hbWU9JHt1c2VybmFtZX1gKVxuICAgICAgICAudGhlbihkYXRhID0+IGRhdGEuanNvbigpKVxuICAgICAgICAudGhlbihyZXNwb25zZSA9PiB7XG4gICAgICAgICAgaWYgKHJlc3BvbnNlLm1lc3NhZ2UgPT09IFwic3VjY2Vzc1wiKSB7XG4gICAgICAgICAgICBvblN1Ym1pdCh7IGRpc3RhbmNlOiBudWxsLCBzdWJtaXR0ZWQ6IHRydWUgfSk7XG4gICAgICAgICAgICByZXR1cm4gcm91dGVyLnJlcGxhY2UoXCIvXCIpO1xuICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICByZXR1cm4gb25TdWJtaXQoeyAuLi5kYXRhIH0pO1xuICAgICAgICAgIH1cbiAgICAgICAgfSk7XG4gICAgfSBjYXRjaCAoZSkge1xuICAgICAgY29uc29sZS5sb2coZSwgXCJlcnJvclwiKTtcbiAgICB9XG4gIH07XG5cbiAgcmV0dXJuIChcbiAgICA8bWFpbiBjbGFzc05hbWU9XCJjb250YWluZXJcIj5cbiAgICAgIDxIZWFkIHRpdGxlPVwiSG9tZVwiIC8+XG4gICAgICA8U2lkZWJhclxuICAgICAgICBkYXRhPXtkYXRhfVxuICAgICAgICBzZXRMb2FkaW5nPXtzZXRMb2FkaW5nfVxuICAgICAgICBsb2FkaW5nPXtsb2FkaW5nfVxuICAgICAgICByYW5kb21QbGFjZT17cmFuZG9tUGxhY2V9XG4gICAgICAgIGhhbmRsZUZvcm09e2hhbmRsZUZvcm19XG4gICAgICAgIHVzZXJuYW1lPXt1c2VybmFtZX1cbiAgICAgICAgc2V0VXNlcm5hbWU9e3NldFVzZXJuYW1lfVxuICAgICAgLz5cbiAgICAgIDxTdGFnZSB3aWR0aD17ZGF0YS5kaXN0YW5jZSA/IFwiMTAwJVwiIDogXCIxMDIwcHhcIn0gaGVpZ2h0PXs0MDB9PlxuICAgICAgICA8Wm9vbUNvbnRhaW5lciBkYXRhPXtkYXRhfSBmaW5pc2hlZD17ZGF0YS5kaXN0YW5jZSAhPT0gbnVsbH0+XG4gICAgICAgICAgPFdvcmxkTWFwXG4gICAgICAgICAgICBkYXRhPXtkYXRhfVxuICAgICAgICAgICAgb25TdWJtaXQ9e2RhdGEgPT4gb25TdWJtaXQoZGF0YSl9XG4gICAgICAgICAgICBtYXJrZXI9e3JhbmRvbVBsYWNlfVxuICAgICAgICAgICAgc2V0TG9hZGluZz17bG9hZGluZyA9PiBzZXRMb2FkaW5nKGxvYWRpbmcpfVxuICAgICAgICAgIC8+XG4gICAgICAgIDwvWm9vbUNvbnRhaW5lcj5cbiAgICAgIDwvU3RhZ2U+XG5cbiAgICAgIDxzdHlsZSBnbG9iYWwganN4PlxuICAgICAgICB7YFxuICAgICAgICAgIC5jb250YWluZXIge1xuICAgICAgICAgICAgZGlzcGxheTogZ3JpZDtcbiAgICAgICAgICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogJHtkYXRhLmRpc3RhbmNlID8gXCIyZnJcIiA6IFwiMWZyXCJ9IDRmcjtcbiAgICAgICAgICB9XG4gICAgICAgICAgLm92ZXJsYXkge1xuICAgICAgICAgICAgcGFkZGluZzogMTJweDtcbiAgICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgICB9XG4gICAgICAgICAgLmNvbnRlbnQge1xuICAgICAgICAgICAgYmFja2dyb3VuZDogd2hpdGU7XG4gICAgICAgICAgfVxuICAgICAgICAgIGltZyB7XG4gICAgICAgICAgICBoZWlnaHQ6IDIwMHB4O1xuICAgICAgICAgIH1cbiAgICAgICAgICBib2R5IHtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgfVxuICAgICAgICBgfVxuICAgICAgPC9zdHlsZT5cbiAgICA8L21haW4+XG4gICk7XG59O1xuXG5jb25zdCBBUElfVVJMID1cbiAgXCJodHRwczovL2FwaS5kYXRhLm5ldHdlcmtkaWdpdGFhbGVyZmdvZWQubmwvZGF0YXNldHMvaXZvL05NVlcvc2VydmljZXMvTk1WVy0xNS9zcGFycWxcIjtcblxuY29uc3QgQVBJX1FVRVJZID0gYFxuUFJFRklYIHJkZjogPGh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyM+XG5QUkVGSVggZGM6IDxodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLz5cblBSRUZJWCBkY3Q6IDxodHRwOi8vcHVybC5vcmcvZGMvdGVybXMvPlxuUFJFRklYIHNrb3M6IDxodHRwOi8vd3d3LnczLm9yZy8yMDA0LzAyL3Nrb3MvY29yZSM+XG5QUkVGSVggZWRtOiA8aHR0cDovL3d3dy5ldXJvcGVhbmEuZXUvc2NoZW1hcy9lZG0vPlxuUFJFRklYIGZvYWY6IDxodHRwOi8veG1sbnMuY29tL2ZvYWYvMC4xLz5cblBSRUZJWCBoZGxoOiA8aHR0cHM6Ly9oZGwuaGFuZGxlLm5ldC8yMC41MDAuMTE4NDAvdGVybW1hc3Rlcj5cblBSRUZJWCB3Z3M4NDogPGh0dHA6Ly93d3cudzMub3JnLzIwMDMvMDEvZ2VvL3dnczg0X3BvcyM+XG5QUkVGSVggZ2VvOiA8aHR0cDovL3d3dy5vcGVuZ2lzLm5ldC9vbnQvZ2Vvc3BhcnFsIz5cblBSRUZJWCBza29zOiA8aHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjPlxuUFJFRklYIGduOiA8aHR0cDovL3d3dy5nZW9uYW1lcy5vcmcvb250b2xvZ3kjPlxuUFJFRklYIHJkZjogPGh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyM+XG5QUkVGSVggcmRmczogPGh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDEvcmRmLXNjaGVtYSM+XG5cbiMgZTFuIGZvdG8gcGVyIGxhbmQgKG1ldCB0eXBlLCBpbWcsIGxhdCBlbiBsb25nIHZhbiBkZSBwbGFhdHNcblNFTEVDVCAqXG5XSEVSRSB7XG4jIHZpbmQgYWxsZWVuIGZvdG8nc1xuPGh0dHBzOi8vaGRsLmhhbmRsZS5uZXQvMjAuNTAwLjExODQwL3Rlcm1tYXN0ZXIxMzk3PiBza29zOm5hcnJvd2VyKiA/dHlwZSAuXG4/dHlwZSBza29zOnByZWZMYWJlbCA/dHlwZUxhYmVsIC5cbj9jaG8gZWRtOm9iamVjdCA/dHlwZSAuXG5cbiMgP2NobyBkYzp0aXRsZSA/dGl0bGUgLlxuP2NobyBlZG06aXNTaG93bkJ5ID9pbWcgLlxuXG4jIHZpbmQgYmlqIGRlIG9iamVjdGVuIGhldCBsYW5kXG4/Y2hvIGRjdDpzcGF0aWFsID9wbGFjZSAuXG4/cGxhY2Ugc2tvczpleGFjdE1hdGNoL2duOnBhcmVudENvdW50cnkgP2xhbmQgLlxuIyA/cGxhY2Ugc2tvczpwcmVmTGFiZWwgP3BsYWNlTmFtZSAuXG4/bGFuZCBnbjpuYW1lID9sYW5kTGFiZWwgLlxuXG4jIHZpbmQgYmlqIGRlIHBsYWF0cyB2YW4gZGUgZm90byBkZSBsYXQvbG9uZ1xuP3BsYWNlIHNrb3M6ZXhhY3RNYXRjaC93Z3M4NDpsYXQgP2xhdCAuXG4/cGxhY2Ugc2tvczpleGFjdE1hdGNoL3dnczg0OmxvbmcgP2xvbmcgLlxuXG59XG5PRkZTRVQgUkFORCgpICogNVxuIzEwMDAwMFxuTElNSVQgMVxuYDtcblxuSG9tZS5nZXRJbml0aWFsUHJvcHMgPSBhc3luYyBmdW5jdGlvbigpIHtcbiAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goXG4gICAgYCR7QVBJX1VSTH0/cXVlcnk9JHtlbmNvZGVVUklDb21wb25lbnQoQVBJX1FVRVJZKX0mZm9ybWF0PWpzb25gXG4gICk7XG4gIGNvbnN0IGFwaURhdGEgPSBhd2FpdCByZXMuanNvbigpO1xuXG4gIHJldHVybiB7XG4gICAgcmFuZG9tUGxhY2U6IGFwaURhdGEucmVzdWx0cy5iaW5kaW5nc1xuICB9O1xufTtcblxuZXhwb3J0IGRlZmF1bHQgSG9tZTtcbiJdfQ== */\n/*@ sourceURL=/Users/n86ies/Documents/school/information-design/frontend-data/pages/index.js */")));
+  }, ".container{display:grid;grid-template-columns:".concat(data.distance ? "2fr" : "1fr", " 4fr;}.overlay{padding:12px;overflow:hidden;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}.content{background:white;}img{height:200px;}body{margin:0;padding:0;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9uODZpZXMvRG9jdW1lbnRzL3NjaG9vbC9pbmZvcm1hdGlvbi1kZXNpZ24vZnJvbnRlbmQtZGF0YS9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF3R1MsQUFHMEIsQUFJQSxBQU1JLEFBR0osQUFHSixTQUNDLElBaEI2QyxBQUl2QyxBQVNsQixJQUhBLEVBT0EsVUFaZSx1Q0FKZixtQ0FLd0IsOEVBQ3hCIiwiZmlsZSI6Ii9Vc2Vycy9uODZpZXMvRG9jdW1lbnRzL3NjaG9vbC9pbmZvcm1hdGlvbi1kZXNpZ24vZnJvbnRlbmQtZGF0YS9wYWdlcy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSB9IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0IHsgdXNlUm91dGVyIH0gZnJvbSBcIm5leHQvcm91dGVyXCI7XG5pbXBvcnQgSGVhZCBmcm9tIFwiLi4vY29tcG9uZW50cy9oZWFkXCI7XG5cbi8vIGh0dHBzOi8vY29kZXNhbmRib3guaW8vcy9jcmVhdGluZy12aXN1YWxpemF0aW9ucy13aXRoLWQzLWFuZC1yZWFjdC0zb2ZkeFxuaW1wb3J0IHsgU3RhZ2UgfSBmcm9tIFwiLi8uLi9jb21wb25lbnRzL3N0YWdlXCI7XG5pbXBvcnQgU2lkZWJhciBmcm9tIFwiLi8uLi9jb21wb25lbnRzL1NpZGViYXJcIjtcbmltcG9ydCB7IFpvb21Db250YWluZXIgfSBmcm9tIFwiLi8uLi9jb21wb25lbnRzL1pvb21Db250YWluZXJcIjtcbmltcG9ydCBXb3JsZE1hcCBmcm9tIFwiLi8uLi9jb21wb25lbnRzL01hcFwiO1xuXG4vLyBodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL2EvMzA3MDc0MjNcbmZ1bmN0aW9uIGpzb25Ub1F1ZXJ5U3RyaW5nKGpzb24pIHtcbiAgcmV0dXJuIChcbiAgICBcIj9cIiArXG4gICAgT2JqZWN0LmtleXMoanNvbilcbiAgICAgIC5tYXAoZnVuY3Rpb24oa2V5KSB7XG4gICAgICAgIHJldHVybiBlbmNvZGVVUklDb21wb25lbnQoa2V5KSArIFwiPVwiICsgZW5jb2RlVVJJQ29tcG9uZW50KGpzb25ba2V5XSk7XG4gICAgICB9KVxuICAgICAgLmpvaW4oXCImXCIpXG4gICk7XG59XG5cbmNvbnN0IEhvbWUgPSAoeyByYW5kb21QbGFjZSwgc2NvcmVEYXRhIH0pID0+IHtcbiAgY29uc3QgW2xvYWRpbmcsIHNldExvYWRpbmddID0gdXNlU3RhdGUodHJ1ZSk7XG4gIGNvbnN0IFt1c2VybmFtZSwgc2V0VXNlcm5hbWVdID0gdXNlU3RhdGUodW5kZWZpbmVkKTtcbiAgY29uc3QgW2NvbXBhcmluZ1Njb3Jlcywgc2V0Q29tcGFyaW5nU2NvcmVzXSA9IHVzZVN0YXRlKGZhbHNlKTtcbiAgY29uc3QgW2RhdGEsIG9uU3VibWl0XSA9IHVzZVN0YXRlKHsgZGlzdGFuY2U6IG51bGwgfSk7XG5cbiAgY29uc3QgaGFuZGxlRm9ybSA9IGFzeW5jICgpID0+IHtcbiAgICBjb25zdCByYXdSZXNwb25zZSA9IGF3YWl0IGZldGNoKFxuICAgICAgYGh0dHBzOi8vaW9uaXplZC1wcm90b2NlcmF0b3BzLmdsaXRjaC5tZS9hZGRTY29yZSR7anNvblRvUXVlcnlTdHJpbmcoe1xuICAgICAgICB1c2VybmFtZTogdXNlcm5hbWUsXG4gICAgICAgIHNjb3JlOiBkYXRhLmRpc3RhbmNlLFxuICAgICAgICBjaG86IGRhdGEuY2hvLFxuICAgICAgICBsb25nOiBkYXRhLnVzZXJDbGlja0Nvb3JkaW5hdGlvbnNbMF0sXG4gICAgICAgIGxhdDogZGF0YS51c2VyQ2xpY2tDb29yZGluYXRpb25zWzFdXG4gICAgICB9KX1gLFxuICAgICAge1xuICAgICAgICBtZXRob2Q6IFwiUE9TVFwiLFxuICAgICAgICBoZWFkZXJzOiB7XG4gICAgICAgICAgQWNjZXB0OiBcImFwcGxpY2F0aW9uL2pzb25cIixcbiAgICAgICAgICBcIkNvbnRlbnQtVHlwZVwiOiBcImFwcGxpY2F0aW9uL2pzb25cIlxuICAgICAgICB9XG4gICAgICB9XG4gICAgKTtcblxuICAgIGNvbnN0IGNvbnRlbnQgPSBhd2FpdCByYXdSZXNwb25zZS5qc29uKCk7XG5cbiAgICBpZiAoY29udGVudC5tZXNzYWdlID09PSBcInN1Y2Nlc3NcIikge1xuICAgICAgc2V0Q29tcGFyaW5nU2NvcmVzKHRydWUpO1xuICAgIH0gZWxzZSB7XG4gICAgICByZXR1cm4gb25TdWJtaXQoeyAuLi5kYXRhIH0pO1xuICAgIH1cbiAgfTtcblxuICByZXR1cm4gKFxuICAgIDxtYWluIGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgPEhlYWQgdGl0bGU9XCJIb21lXCIgLz5cbiAgICAgIDxTaWRlYmFyXG4gICAgICAgIG9uU3VibWl0PXtvblN1Ym1pdH1cbiAgICAgICAgc2NvcmVEYXRhPXtzY29yZURhdGF9XG4gICAgICAgIGNvbXBhcmluZ1Njb3Jlcz17Y29tcGFyaW5nU2NvcmVzfVxuICAgICAgICBkYXRhPXtkYXRhfVxuICAgICAgICBzZXRMb2FkaW5nPXtzZXRMb2FkaW5nfVxuICAgICAgICBsb2FkaW5nPXtsb2FkaW5nfVxuICAgICAgICByYW5kb21QbGFjZT17cmFuZG9tUGxhY2V9XG4gICAgICAgIGhhbmRsZUZvcm09e2hhbmRsZUZvcm19XG4gICAgICAgIHVzZXJuYW1lPXt1c2VybmFtZX1cbiAgICAgICAgc2V0VXNlcm5hbWU9e3NldFVzZXJuYW1lfVxuICAgICAgICBjaG9TcGVjaWZpY0hpZ2hzY29yZXM9e3Njb3JlRGF0YS5maWx0ZXIoXG4gICAgICAgICAgKHsgY2hvIH0pID0+XG4gICAgICAgICAgICBOdW1iZXIoXG4gICAgICAgICAgICAgIHJhbmRvbVBsYWNlWzBdLmNoby52YWx1ZS5zcGxpdChcIi9cIilbXG4gICAgICAgICAgICAgICAgcmFuZG9tUGxhY2VbMF0uY2hvLnZhbHVlLnNwbGl0KFwiL1wiKS5sZW5ndGggLSAxXG4gICAgICAgICAgICAgIF1cbiAgICAgICAgICAgICkgPT09IGNob1xuICAgICAgICApfVxuICAgICAgICBzZXRDb21wYXJpbmdTY29yZXM9eygpID0+IHNldENvbXBhcmluZ1Njb3JlcyghY29tcGFyaW5nU2NvcmVzKX1cbiAgICAgIC8+XG4gICAgICA8U3RhZ2Ugd2lkdGg9e2RhdGEuZGlzdGFuY2UgPyBcIjEwMCVcIiA6IFwiMTAyMHB4XCJ9IGhlaWdodD17NDAwfT5cbiAgICAgICAgPFpvb21Db250YWluZXJcbiAgICAgICAgICBjb21wYXJpbmdTY29yZXM9e2NvbXBhcmluZ1Njb3Jlc31cbiAgICAgICAgICBkYXRhPXtkYXRhfVxuICAgICAgICAgIGZpbmlzaGVkPXtkYXRhLmRpc3RhbmNlICE9PSBudWxsfVxuICAgICAgICA+XG4gICAgICAgICAgPFdvcmxkTWFwXG4gICAgICAgICAgICBzY29yZURhdGE9e3Njb3JlRGF0YS5maWx0ZXIoXG4gICAgICAgICAgICAgICh7IGNobyB9KSA9PlxuICAgICAgICAgICAgICAgIE51bWJlcihcbiAgICAgICAgICAgICAgICAgIHJhbmRvbVBsYWNlWzBdLmNoby52YWx1ZS5zcGxpdChcIi9cIilbXG4gICAgICAgICAgICAgICAgICAgIHJhbmRvbVBsYWNlWzBdLmNoby52YWx1ZS5zcGxpdChcIi9cIikubGVuZ3RoIC0gMVxuICAgICAgICAgICAgICAgICAgXVxuICAgICAgICAgICAgICAgICkgPT09IGNob1xuICAgICAgICAgICAgKX1cbiAgICAgICAgICAgIGNvbXBhcmluZ1Njb3Jlcz17Y29tcGFyaW5nU2NvcmVzfVxuICAgICAgICAgICAgZGF0YT17ZGF0YX1cbiAgICAgICAgICAgIG9uU3VibWl0PXtkYXRhID0+IG9uU3VibWl0KGRhdGEpfVxuICAgICAgICAgICAgbWFya2VyPXtyYW5kb21QbGFjZX1cbiAgICAgICAgICAgIHNldExvYWRpbmc9e2xvYWRpbmcgPT4gc2V0TG9hZGluZyhsb2FkaW5nKX1cbiAgICAgICAgICAvPlxuICAgICAgICA8L1pvb21Db250YWluZXI+XG4gICAgICA8L1N0YWdlPlxuXG4gICAgICA8c3R5bGUgZ2xvYmFsIGpzeD5cbiAgICAgICAge2BcbiAgICAgICAgICAuY29udGFpbmVyIHtcbiAgICAgICAgICAgIGRpc3BsYXk6IGdyaWQ7XG4gICAgICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6ICR7ZGF0YS5kaXN0YW5jZSA/IFwiMmZyXCIgOiBcIjFmclwifSA0ZnI7XG4gICAgICAgICAgfVxuICAgICAgICAgIC5vdmVybGF5IHtcbiAgICAgICAgICAgIHBhZGRpbmc6IDEycHg7XG4gICAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgICAgICAgfVxuICAgICAgICAgIC5jb250ZW50IHtcbiAgICAgICAgICAgIGJhY2tncm91bmQ6IHdoaXRlO1xuICAgICAgICAgIH1cbiAgICAgICAgICBpbWcge1xuICAgICAgICAgICAgaGVpZ2h0OiAyMDBweDtcbiAgICAgICAgICB9XG4gICAgICAgICAgYm9keSB7XG4gICAgICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgIH1cbiAgICAgICAgYH1cbiAgICAgIDwvc3R5bGU+XG4gICAgPC9tYWluPlxuICApO1xufTtcblxuY29uc3QgQVBJX1VSTCA9XG4gIFwiaHR0cHM6Ly9hcGkuZGF0YS5uZXR3ZXJrZGlnaXRhYWxlcmZnb2VkLm5sL2RhdGFzZXRzL2l2by9OTVZXL3NlcnZpY2VzL05NVlctMTUvc3BhcnFsXCI7XG5cbmNvbnN0IEFQSV9RVUVSWSA9IGBcblBSRUZJWCByZGY6IDxodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjPlxuUFJFRklYIGRjOiA8aHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8+XG5QUkVGSVggZGN0OiA8aHR0cDovL3B1cmwub3JnL2RjL3Rlcm1zLz5cblBSRUZJWCBza29zOiA8aHR0cDovL3d3dy53My5vcmcvMjAwNC8wMi9za29zL2NvcmUjPlxuUFJFRklYIGVkbTogPGh0dHA6Ly93d3cuZXVyb3BlYW5hLmV1L3NjaGVtYXMvZWRtLz5cblBSRUZJWCBmb2FmOiA8aHR0cDovL3htbG5zLmNvbS9mb2FmLzAuMS8+XG5QUkVGSVggaGRsaDogPGh0dHBzOi8vaGRsLmhhbmRsZS5uZXQvMjAuNTAwLjExODQwL3Rlcm1tYXN0ZXI+XG5QUkVGSVggd2dzODQ6IDxodHRwOi8vd3d3LnczLm9yZy8yMDAzLzAxL2dlby93Z3M4NF9wb3MjPlxuUFJFRklYIGdlbzogPGh0dHA6Ly93d3cub3Blbmdpcy5uZXQvb250L2dlb3NwYXJxbCM+XG5QUkVGSVggc2tvczogPGh0dHA6Ly93d3cudzMub3JnLzIwMDQvMDIvc2tvcy9jb3JlIz5cblBSRUZJWCBnbjogPGh0dHA6Ly93d3cuZ2VvbmFtZXMub3JnL29udG9sb2d5Iz5cblBSRUZJWCByZGY6IDxodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjPlxuUFJFRklYIHJkZnM6IDxodHRwOi8vd3d3LnczLm9yZy8yMDAwLzAxL3JkZi1zY2hlbWEjPlxuXG4jIGUxbiBmb3RvIHBlciBsYW5kIChtZXQgdHlwZSwgaW1nLCBsYXQgZW4gbG9uZyB2YW4gZGUgcGxhYXRzXG5TRUxFQ1QgKlxuV0hFUkUge1xuIyB2aW5kIGFsbGVlbiBmb3RvJ3NcbjxodHRwczovL2hkbC5oYW5kbGUubmV0LzIwLjUwMC4xMTg0MC90ZXJtbWFzdGVyMTM5Nz4gc2tvczpuYXJyb3dlciogP3R5cGUgLlxuP3R5cGUgc2tvczpwcmVmTGFiZWwgP3R5cGVMYWJlbCAuXG4/Y2hvIGVkbTpvYmplY3QgP3R5cGUgLlxuXG4jID9jaG8gZGM6dGl0bGUgP3RpdGxlIC5cbj9jaG8gZWRtOmlzU2hvd25CeSA/aW1nIC5cblxuIyB2aW5kIGJpaiBkZSBvYmplY3RlbiBoZXQgbGFuZFxuP2NobyBkY3Q6c3BhdGlhbCA/cGxhY2UgLlxuP3BsYWNlIHNrb3M6ZXhhY3RNYXRjaC9nbjpwYXJlbnRDb3VudHJ5ID9sYW5kIC5cbiMgP3BsYWNlIHNrb3M6cHJlZkxhYmVsID9wbGFjZU5hbWUgLlxuP2xhbmQgZ246bmFtZSA/bGFuZExhYmVsIC5cblxuIyB2aW5kIGJpaiBkZSBwbGFhdHMgdmFuIGRlIGZvdG8gZGUgbGF0L2xvbmdcbj9wbGFjZSBza29zOmV4YWN0TWF0Y2gvd2dzODQ6bGF0ID9sYXQgLlxuP3BsYWNlIHNrb3M6ZXhhY3RNYXRjaC93Z3M4NDpsb25nID9sb25nIC5cblxufVxuT0ZGU0VUIFJBTkQoKSAqIDVcbiMxMDAwMDBcbkxJTUlUIDFcbmA7XG5cbkhvbWUuZ2V0SW5pdGlhbFByb3BzID0gYXN5bmMgZnVuY3Rpb24oKSB7XG4gIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKFxuICAgIGAke0FQSV9VUkx9P3F1ZXJ5PSR7ZW5jb2RlVVJJQ29tcG9uZW50KEFQSV9RVUVSWSl9JmZvcm1hdD1qc29uYFxuICApO1xuICBjb25zdCBhcGlEYXRhID0gYXdhaXQgcmVzLmpzb24oKTtcblxuICBjb25zdCBzY29yZXMgPSBhd2FpdCBmZXRjaChcbiAgICBcImh0dHBzOi8vaW9uaXplZC1wcm90b2NlcmF0b3BzLmdsaXRjaC5tZS9nZXRTY29yZXNcIlxuICApO1xuICBjb25zdCBzY29yZURhdGEgPSBhd2FpdCBzY29yZXMuanNvbigpO1xuICBjb25zb2xlLmxvZyhhcGlEYXRhLnJlc3VsdHMuYmluZGluZ3MsIHNjb3JlRGF0YSk7XG4gIHJldHVybiB7XG4gICAgcmFuZG9tUGxhY2U6IGFwaURhdGEucmVzdWx0cy5iaW5kaW5ncyxcbiAgICAvLyBjaG9IaWdoc2NvcmVzOiBzY29yZURhdGEuLnNvcnQoKHgsIHkpID0+IHguc2NvcmUgLSB5LnNjb3JlKVxuICAgIHNjb3JlRGF0YTogc2NvcmVEYXRhLnNvcnQoKHgsIHkpID0+IHguc2NvcmUgLSB5LnNjb3JlKVxuICB9O1xufTtcblxuZXhwb3J0IGRlZmF1bHQgSG9tZTtcbiJdfQ== */\n/*@ sourceURL=/Users/n86ies/Documents/school/information-design/frontend-data/pages/index.js */")));
 };
 
 var API_URL = "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-15/sparql";
@@ -43695,32 +43939,47 @@ Home.getInitialProps =
 /*#__PURE__*/
 Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_7__["default"])(
 /*#__PURE__*/
-_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.mark(function _callee() {
-  var res, apiData;
-  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_6___default.a.wrap(function _callee$(_context) {
+_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_5___default.a.mark(function _callee2() {
+  var res, apiData, scores, scoreData;
+  return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_5___default.a.wrap(function _callee2$(_context2) {
     while (1) {
-      switch (_context.prev = _context.next) {
+      switch (_context2.prev = _context2.next) {
         case 0:
-          _context.next = 2;
+          _context2.next = 2;
           return fetch("".concat(API_URL, "?query=").concat(encodeURIComponent(API_QUERY), "&format=json"));
 
         case 2:
-          res = _context.sent;
-          _context.next = 5;
+          res = _context2.sent;
+          _context2.next = 5;
           return res.json();
 
         case 5:
-          apiData = _context.sent;
-          return _context.abrupt("return", {
-            randomPlace: apiData.results.bindings
+          apiData = _context2.sent;
+          _context2.next = 8;
+          return fetch("https://ionized-protoceratops.glitch.me/getScores");
+
+        case 8:
+          scores = _context2.sent;
+          _context2.next = 11;
+          return scores.json();
+
+        case 11:
+          scoreData = _context2.sent;
+          console.log(apiData.results.bindings, scoreData);
+          return _context2.abrupt("return", {
+            randomPlace: apiData.results.bindings,
+            // choHighscores: scoreData..sort((x, y) => x.score - y.score)
+            scoreData: scoreData.sort(function (x, y) {
+              return x.score - y.score;
+            })
           });
 
-        case 7:
+        case 14:
         case "end":
-          return _context.stop();
+          return _context2.stop();
       }
     }
-  }, _callee);
+  }, _callee2);
 }));
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
