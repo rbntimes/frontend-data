@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { PropTypes } from "prop-types";
 import { geoEquirectangular, geoPath } from "d3-geo";
 import * as d3 from "d3";
@@ -12,18 +12,16 @@ const projection = geoEquirectangular();
 
 class Map extends React.Component {
   componentDidMount() {
-    const {
-      marker,
-      onSubmit,
-      userClickCoordinations,
-      randomPlaceCoordinations
-    } = this.props;
-    console.log("mount");
+    const { onSubmit } = this.props;
     const map = d3.select("#map");
     // First create the world
-    fetch("/static/custom.geo.json").then(response => {
+    fetch(
+      `${
+        process.env.NODE_ENV !== "development" ? "/frontend-data/" : "/"
+      }static/custom.geo.json`
+    ).then(response => {
       if (response.status !== 200) {
-        console.log(`There was a problem: ${response.status}`);
+        console.log(`Kan de map niet ladem: ${response.status}`);
         return;
       }
       response.json().then(worlddata => {
@@ -44,9 +42,9 @@ class Map extends React.Component {
         //   .clamp(true)
         //   .range(["lightgrey", "red"]);
 
+        map.append("g").attr("id", "lines");
         map.append("g").attr("id", "markers");
 
-        this.drawMarker(marker);
         map.on("click", () => this.handleClick());
       });
     });
@@ -73,6 +71,16 @@ class Map extends React.Component {
     const userClickCoordinations = projection.invert(
       d3.clientPoint(d3.event.target, d3.event)
     );
+
+    this.drawMarker([
+      ...this.props.marker,
+      {
+        id: "answer",
+        lat: userClickCoordinations[1],
+        long: userClickCoordinations[0]
+      }
+    ]);
+
     const randomPlaceCoordinations = projection.invert([
       d3.select("#randomplace").attr("cx"),
       d3.select("#randomplace").attr("cy")
@@ -116,31 +124,10 @@ class Map extends React.Component {
       .attr("stroke-width", 2)
       .attr("fill", "none");
 
-    // Also add marker on top of where user pressed
-    map
-      .select("#markers")
-      .append("circle")
-      .attr("id", "answer")
-      .attr("fill", "blue")
-      .attr("stroke-width", 2 / 2)
-      .attr("stroke", "white")
-      .attr(
-        "cx",
-        projection([
-          Number(userClickCoordinations[0]),
-          Number(userClickCoordinations[1])
-        ])[0]
-      )
-      .attr(
-        "cy",
-        projection([
-          Number(userClickCoordinations[0]),
-          Number(userClickCoordinations[1])
-        ])[1]
-      )
-      .attr("r", 2);
-
     return onSubmit({
+      cho: marker[0].cho.value.split("/")[
+        marker[0].cho.value.split("/").length - 1
+      ],
       finished: true,
       userClickCoordinations,
       randomPlaceCoordinations,
@@ -157,29 +144,106 @@ class Map extends React.Component {
     });
   }
 
+  getPlaceCoordinates(id) {
+    return projection.invert([
+      d3.select(id).attr("cx"),
+      d3.select(id).attr("cy")
+    ]);
+  }
+
+  drawLines(scoreData) {
+    const randomPlaceCoordinations = projection.invert([
+      d3.select("#randomplace").attr("cx"),
+      d3.select("#randomplace").attr("cy")
+    ]);
+
+    d3.select("#lines")
+      .selectAll("line")
+      .data(scoreData)
+      .enter()
+      .append("line")
+      .attr("x1", ({ id }) => {
+        const select = d3.select(`#id_${id}`);
+
+        if (!select.empty()) {
+          return projection([
+            this.getPlaceCoordinates(`#id_${id}`)[0],
+            this.getPlaceCoordinates(`#id_${id}`)[1]
+          ])[0];
+        }
+        return 0;
+      })
+      .attr("y1", ({ id }) => {
+        const select = d3.select(`#id_${id}`);
+
+        if (!select.empty()) {
+          return projection([
+            this.getPlaceCoordinates(`#id_${id}`)[0],
+            this.getPlaceCoordinates(`#id_${id}`)[1]
+          ])[1];
+        }
+        return 0;
+      })
+      .attr(
+        "x2",
+        projection([
+          Number(randomPlaceCoordinations[0]),
+          Number(randomPlaceCoordinations[1])
+        ])[0]
+      )
+      .attr(
+        "y2",
+        projection([
+          Number(randomPlaceCoordinations[0]),
+          Number(randomPlaceCoordinations[1])
+        ])[1]
+      )
+      .attr("id", ({ id }) => `line_${id}`)
+      .attr("stroke", "grey")
+      .attr("stroke-width", 1)
+      .attr("fill", "none");
+  }
+
   drawMarker(marker) {
-    d3.select("#markers")
+    return d3
+      .select("#markers")
       .selectAll("circle")
       .data(marker)
       .enter()
       .append("circle")
-      .attr("id", "randomplace")
+      .attr("id", ({ id }) => (!id ? "randomplace" : `id_${id}`))
       .attr(
         "cx",
-        d => projection([Number(d.long.value), Number(d.lat.value)])[0]
+        ({ id, long, lat }) =>
+          projection([
+            Number(id ? long : long.value),
+            Number(id ? lat : lat.value)
+          ])[0]
       )
       .attr(
         "cy",
-        d => projection([Number(d.long.value), Number(d.lat.value)])[1]
+        ({ id, long, lat }) =>
+          projection([
+            Number(id ? long : long.value),
+            Number(id ? lat : lat.value)
+          ])[1]
       )
       .attr("r", 2)
-      .attr("fill", "blue")
+      .attr("fill", ({ id }) => (!id ? "green" : "blue"))
+      .attr("opacity", () => 1)
       .attr("stroke-width", 2 / 2)
-      .attr("stroke", "white");
+      .attr("stroke", "white")
+      .append("svg:title")
+      .text(function(d) {
+        return d.username;
+      });
   }
 
   resetMap() {
     d3.select("#markers")
+      .selectAll("*")
+      .remove();
+    d3.select("#lines")
       .selectAll("*")
       .remove();
     d3.selectAll("path").attr("fill", "black");
@@ -189,10 +253,14 @@ class Map extends React.Component {
   shouldComponentUpdate(nextProps) {
     if (nextProps.data.distance === null && nextProps.data.submitted) {
       this.resetMap();
-      this.drawMarker(nextProps.marker);
       return true;
+    } else if (nextProps.comparingScores) {
+      this.drawMarker(nextProps.scoreData);
+      this.drawLines(nextProps.scoreData);
+
+      return false;
     } else if (nextProps.data.finished) {
-      return d3.select("#map").on("click", null);
+      d3.select("#map").on("click", null);
       return false;
     }
 
@@ -205,8 +273,7 @@ class Map extends React.Component {
 }
 
 Map.propTypes = {
-  onSubmit: PropTypes.func,
-  marker: PropTypes.shape
+  onSubmit: PropTypes.func
 };
 
 export default Map;

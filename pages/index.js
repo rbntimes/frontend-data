@@ -8,25 +8,48 @@ import Sidebar from "./../components/Sidebar";
 import { ZoomContainer } from "./../components/ZoomContainer";
 import WorldMap from "./../components/Map";
 
-const Home = ({ randomPlace }) => {
-  const router = useRouter();
+// https://stackoverflow.com/a/30707423
+function jsonToQueryString(json) {
+  return (
+    "?" +
+    Object.keys(json)
+      .map(function(key) {
+        return encodeURIComponent(key) + "=" + encodeURIComponent(json[key]);
+      })
+      .join("&")
+  );
+}
+
+const Home = ({ randomPlace, scoreData }) => {
   const [loading, setLoading] = useState(true);
   const [username, setUsername] = useState(undefined);
+  const [comparingScores, setComparingScores] = useState(false);
   const [data, onSubmit] = useState({ distance: null });
-  const handleForm = () => {
-    try {
-      fetch(`/api/addScore?distance=${data.distance}&username=${username}`)
-        .then(data => data.json())
-        .then(response => {
-          if (response.message === "success") {
-            onSubmit({ distance: null, submitted: true });
-            return router.replace("/");
-          } else {
-            return onSubmit({ ...data });
-          }
-        });
-    } catch (e) {
-      console.log(e, "error");
+
+  const handleForm = async () => {
+    const rawResponse = await fetch(
+      `https://ionized-protoceratops.glitch.me/addScore${jsonToQueryString({
+        username: username,
+        score: data.distance,
+        cho: data.cho,
+        long: data.userClickCoordinations[0],
+        lat: data.userClickCoordinations[1]
+      })}`,
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        }
+      }
+    );
+
+    const content = await rawResponse.json();
+
+    if (content.message === "success") {
+      setComparingScores(true);
+    } else {
+      return onSubmit({ ...data });
     }
   };
 
@@ -34,6 +57,9 @@ const Home = ({ randomPlace }) => {
     <main className="container">
       <Head title="Home" />
       <Sidebar
+        onSubmit={onSubmit}
+        scoreData={scoreData}
+        comparingScores={comparingScores}
         data={data}
         setLoading={setLoading}
         loading={loading}
@@ -41,10 +67,32 @@ const Home = ({ randomPlace }) => {
         handleForm={handleForm}
         username={username}
         setUsername={setUsername}
+        choSpecificHighscores={scoreData.filter(
+          ({ cho }) =>
+            Number(
+              randomPlace[0].cho.value.split("/")[
+                randomPlace[0].cho.value.split("/").length - 1
+              ]
+            ) === cho
+        )}
+        setComparingScores={() => setComparingScores(!comparingScores)}
       />
       <Stage width={data.distance ? "100%" : "1020px"} height={400}>
-        <ZoomContainer data={data} finished={data.distance !== null}>
+        <ZoomContainer
+          comparingScores={comparingScores}
+          data={data}
+          finished={data.distance !== null}
+        >
           <WorldMap
+            scoreData={scoreData.filter(
+              ({ cho }) =>
+                Number(
+                  randomPlace[0].cho.value.split("/")[
+                    randomPlace[0].cho.value.split("/").length - 1
+                  ]
+                ) === cho
+            )}
+            comparingScores={comparingScores}
             data={data}
             onSubmit={data => onSubmit(data)}
             marker={randomPlace}
@@ -99,7 +147,6 @@ PREFIX gn: <http://www.geonames.org/ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-# e1n foto per land (met type, img, lat en long van de plaats
 SELECT *
 WHERE {
 # vind alleen foto's
@@ -121,8 +168,7 @@ WHERE {
 ?place skos:exactMatch/wgs84:long ?long .
 
 }
-OFFSET RAND() * 5
-#100000
+OFFSET RAND() * 20
 LIMIT 1
 `;
 
@@ -132,8 +178,14 @@ Home.getInitialProps = async function() {
   );
   const apiData = await res.json();
 
+  const scores = await fetch(
+    "https://ionized-protoceratops.glitch.me/getScores"
+  );
+  const scoreData = await scores.json();
+
   return {
-    randomPlace: apiData.results.bindings
+    randomPlace: apiData.results.bindings,
+    scoreData: scoreData.sort((x, y) => x.score - y.score)
   };
 };
 

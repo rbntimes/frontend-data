@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 import * as d3 from "d3";
 import { useSvg } from "./stage";
-import { geoEquirectangular, geoPath, geoBounds } from "d3-geo";
-import { path } from "d3-path";
-const projection = geoEquirectangular();
-const d3Path = geoPath().projection(projection);
-export function ZoomContainer({ children, data, finished }) {
+import { geoEquirectangular } from "d3-geo";
+
+export function ZoomContainer({ comparingScores, children, data, finished }) {
   const svgElement = useSvg();
   const projection = geoEquirectangular();
   const [{ x, y, k }, setTransform] = useState({ x: 0, y: 0, k: 1 });
 
-  if (data.distance) {
+  if (data.distance && !comparingScores) {
     var width = 900,
       height = 500;
 
@@ -42,7 +40,7 @@ export function ZoomContainer({ children, data, finished }) {
   }
 
   useEffect(() => {
-    if (!svgElement || finished) return;
+    if (!svgElement || (finished && !comparingScores)) return;
     const selection = d3.select(svgElement);
 
     const zoom = d3.zoom().on("zoom", function() {
@@ -50,7 +48,7 @@ export function ZoomContainer({ children, data, finished }) {
     });
     selection.call(zoom);
     return () => selection.on(".zoom", null);
-  }, [finished, projection, svgElement]);
+  }, [comparingScores, finished, projection, svgElement]);
 
   return (
     <g id="map" transform={`translate(${x}, ${y}) scale(${k})`}>

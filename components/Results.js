@@ -1,65 +1,78 @@
 import React, { useState, useEffect } from "react";
 import fetch from "isomorphic-unfetch";
 
-const Results = ({ newEntry }) => {
-  const [results, setResults] = useState([]);
+const Results = ({ newEntry, scoreData, choSpecificHighscores }) => {
+  const results = [...scoreData, newEntry].sort((x, y) => x.score - y.score);
 
-  useEffect(() => {
-    async function getData() {
-      const res = await fetch(
-        "https://ionized-protoceratops.glitch.me/getScores"
-      );
-      const data = await res.json();
-
-      setResults(
-        [...data, { username: "Jouw naam hier", score: newEntry }].sort(
-          (x, y) => x.score - y.score
-        )
-      );
-    }
-    getData();
-  }, [newEntry]);
+  const choSpecificHighscoresResults = [
+    ...choSpecificHighscores,
+    newEntry
+  ].sort((x, y) => x.score - y.score);
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <td>Username:</td>
-          <td>Score:</td>
-        </tr>
-      </thead>
-      <tbody>
-        {results.map(
-          ({ username, score }) =>
-            score && (
-              <tr
-                style={{
-                  color: username === "Jouw naam hier" ? "red" : "black"
-                }}
-                key={Math.random()}
-              >
-                <td>{username}</td>
-                <td>{score}</td>
-              </tr>
-            )
-        )}
-      </tbody>
-      <style global jsx>
+    <div className="container">
+      <div>
+        <h4>Top 5 (alle foto's)</h4>
+        <table>
+          <thead>
+            <tr>
+              <td>Username:</td>
+              <td>Score:</td>
+            </tr>
+          </thead>
+          <tbody>
+            {results.slice(0, 5).map(
+              ({ username, score }) =>
+                score && (
+                  <tr
+                    style={{
+                      color: username === newEntry.username ? "red" : "black"
+                    }}
+                    key={Math.random()}
+                  >
+                    <td>{username}</td>
+                    <td>{score}</td>
+                  </tr>
+                )
+            )}
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h4>Highscores deze foto:</h4>
+        <table>
+          <thead>
+            <tr>
+              <td>Username:</td>
+              <td>Score:</td>
+            </tr>
+          </thead>
+          <tbody>
+            {choSpecificHighscoresResults.map(
+              ({ username, score }) =>
+                score && (
+                  <tr
+                    style={{
+                      color: username === newEntry.username ? "red" : "black"
+                    }}
+                    key={Math.random()}
+                  >
+                    <td>{username}</td>
+                    <td>{score}</td>
+                  </tr>
+                )
+            )}
+          </tbody>
+        </table>
+      </div>
+      <style jsx>
         {`
-          body {
-            margin: 0;
-            padding: 0;
-          }
-          div {
-            width: 100%;
-            max-height: 100vh;
-            overlay: hidden;
-            color: #333;
-            font-family: sans-serif;
+          container {
+            display: flex;
           }
         `}
       </style>
-    </table>
+    </div>
   );
 };
 
