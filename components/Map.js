@@ -171,7 +171,7 @@ class Map extends React.Component {
             this.getPlaceCoordinates(`#id_${id}`)[1]
           ])[0];
         }
-        return 0;
+        return false;
       })
       .attr("y1", ({ id }) => {
         const select = d3.select(`#id_${id}`);
@@ -182,7 +182,7 @@ class Map extends React.Component {
             this.getPlaceCoordinates(`#id_${id}`)[1]
           ])[1];
         }
-        return 0;
+        return false;
       })
       .attr(
         "x2",
