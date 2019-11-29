@@ -77,7 +77,11 @@ const Home = ({ randomPlace, scoreData }) => {
         )}
         setComparingScores={() => setComparingScores(!comparingScores)}
       />
-      <Stage width={data.distance ? "100%" : "1020px"} height={400}>
+      <Stage
+        loading={loading}
+        width={data.distance ? "100%" : "1020px"}
+        height={400}
+      >
         <ZoomContainer
           comparingScores={comparingScores}
           data={data}
@@ -132,6 +136,46 @@ const Home = ({ randomPlace, scoreData }) => {
 const API_URL =
   "https://api.data.netwerkdigitaalerfgoed.nl/datasets/ivo/NMVW/services/NMVW-15/sparql";
 
+// const API_QUERY = `
+// PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+// PREFIX dc: <http://purl.org/dc/elements/1.1/>
+// PREFIX dct: <http://purl.org/dc/terms/>
+// PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+// PREFIX edm: <http://www.europeana.eu/schemas/edm/>
+// PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+// PREFIX hdlh: <https://hdl.handle.net/20.500.11840/termmaster>
+// PREFIX wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+// PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+// PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+// PREFIX gn: <http://www.geonames.org/ontology#>
+// PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+// PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+//
+// SELECT *
+// WHERE {
+// # vind alleen foto's
+// <https://hdl.handle.net/20.500.11840/termmaster1397> skos:narrower* ?type .
+// ?type skos:prefLabel ?typeLabel .
+// ?cho edm:object ?type .
+//
+// # ?cho dc:title ?title .
+// ?cho edm:isShownBy ?img .
+//
+// # vind bij de objecten het land
+// ?cho dct:spatial ?place .
+// ?place skos:exactMatch/gn:parentCountry ?land .
+// # ?place skos:prefLabel ?placeName .
+// ?land gn:name ?landLabel .
+//
+// # vind bij de plaats van de foto de lat/long
+// ?place skos:exactMatch/wgs84:lat ?lat .
+// ?place skos:exactMatch/wgs84:long ?long .
+//
+// }
+// OFFSET RAND() * 20
+// LIMIT 1
+// `;
+
 const API_QUERY = `
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
@@ -147,7 +191,14 @@ PREFIX gn: <http://www.geonames.org/ontology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT *
+# e1n foto per land (met type, img, lat en long van de plaats
+SELECT  (SAMPLE(?cho) AS ?cho)
+      (SAMPLE(?typeLabel) AS ?type)
+      (SAMPLE(?img) AS ?img)
+      (SAMPLE(?lat) AS ?lat)
+      (SAMPLE(?long) AS ?long)
+      ?landLabel
+
 WHERE {
 # vind alleen foto's
 <https://hdl.handle.net/20.500.11840/termmaster1397> skos:narrower* ?type .
@@ -167,8 +218,9 @@ WHERE {
 ?place skos:exactMatch/wgs84:lat ?lat .
 ?place skos:exactMatch/wgs84:long ?long .
 
-}
-OFFSET RAND() * 20
+} GROUP BY ?landLabel
+ORDER BY ?landLabel
+OFFSET RAND() * 5
 LIMIT 1
 `;
 
@@ -185,7 +237,7 @@ Home.getInitialProps = async function() {
 
   return {
     randomPlace: apiData.results.bindings,
-    scoreData: scoreData.sort((x, y) => x.score - y.score)
+    scoreData: scoreData.sort((x, y) => x.id - y.id)
   };
 };
 

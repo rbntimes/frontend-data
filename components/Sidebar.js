@@ -20,10 +20,12 @@ const Sidebar = ({
   const router = useRouter();
 
   const handleReset = () => {
+    setLoading(true);
     setComparingScores();
     onSubmit({ distance: null, submitted: true });
     return router.replace("/");
   };
+
   return (
     <aside className="overlay">
       <h1>Waar zou de volgende foto gemaakt zijn?</h1>
@@ -31,8 +33,22 @@ const Sidebar = ({
         Weet jij waar de volgende afbeelding genomen is, klik op de goeie plek
         op de map
       </p>
+      {loading && (
+        <span>Plaatje wordt opgehaald, even geduld alstublieft...</span>
+      )}
+      <div
+        style={{
+          display: loading ? "none" : "block",
+          height: "400px",
+          width: "100%",
+          "background-image": `url("${randomPlace[0].img.value}")`,
+          "background-size": "cover",
+          "background-position": "center",
+          "background-repeat": "no-repeat"
+        }}
+      ></div>
       <img
-        style={{ display: loading ? "none" : "block" }}
+        style={{ display: "none" }}
         onLoad={loading ? () => setLoading(false) : () => {}}
         src={randomPlace[0].img.value}
       />
@@ -89,6 +105,7 @@ const Sidebar = ({
             text-decoration: underline;
             text-align: center;
             margin: 10px 0;
+            cursor: pointer;
           }
         `}
       </style>

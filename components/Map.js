@@ -74,6 +74,7 @@ class Map extends React.Component {
 
     this.drawMarker([
       ...this.props.marker,
+      ...this.props.scoreData,
       {
         id: "answer",
         lat: userClickCoordinations[1],
@@ -124,6 +125,8 @@ class Map extends React.Component {
       .attr("stroke-width", 2)
       .attr("fill", "none");
 
+    this.drawLines(this.props.scoreData);
+
     return onSubmit({
       cho: marker[0].cho.value.split("/")[
         marker[0].cho.value.split("/").length - 1
@@ -157,21 +160,24 @@ class Map extends React.Component {
       d3.select("#randomplace").attr("cy")
     ]);
 
+    const useData = scoreData.filter(
+      ({ id }) => !d3.select(`#id_${id}`).empty()
+    );
+
     d3.select("#lines")
       .selectAll("line")
-      .data(scoreData)
+      .data(useData)
       .enter()
       .append("line")
       .attr("x1", ({ id }) => {
         const select = d3.select(`#id_${id}`);
-
         if (!select.empty()) {
           return projection([
             this.getPlaceCoordinates(`#id_${id}`)[0],
             this.getPlaceCoordinates(`#id_${id}`)[1]
           ])[0];
         }
-        return false;
+        return null;
       })
       .attr("y1", ({ id }) => {
         const select = d3.select(`#id_${id}`);
@@ -182,7 +188,7 @@ class Map extends React.Component {
             this.getPlaceCoordinates(`#id_${id}`)[1]
           ])[1];
         }
-        return false;
+        return null;
       })
       .attr(
         "x2",
@@ -199,6 +205,7 @@ class Map extends React.Component {
         ])[1]
       )
       .attr("id", ({ id }) => `line_${id}`)
+      .attr("opacity", ({ id }) => (typeof id === "number" ? 0 : 1))
       .attr("stroke", "grey")
       .attr("stroke-width", 1)
       .attr("fill", "none");
@@ -230,7 +237,7 @@ class Map extends React.Component {
       )
       .attr("r", 2)
       .attr("fill", ({ id }) => (!id ? "green" : "blue"))
-      .attr("opacity", () => 1)
+      .attr("opacity", ({ id }) => (typeof id === "number" ? 0 : 1))
       .attr("stroke-width", 2 / 2)
       .attr("stroke", "white")
       .append("svg:title")
@@ -255,8 +262,8 @@ class Map extends React.Component {
       this.resetMap();
       return true;
     } else if (nextProps.comparingScores) {
-      this.drawMarker(nextProps.scoreData);
-      this.drawLines(nextProps.scoreData);
+      d3.selectAll("circle").attr("opacity", 1);
+      d3.selectAll("line").attr("opacity", 1);
 
       return false;
     } else if (nextProps.data.finished) {

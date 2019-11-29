@@ -12,7 +12,7 @@ const Results = ({ newEntry, scoreData, choSpecificHighscores }) => {
   return (
     <div className="container">
       <div>
-        <h4>Top 5 (alle foto's)</h4>
+        <h4>Top 10 (alle foto's)</h4>
         <table>
           <thead>
             <tr>
@@ -21,7 +21,7 @@ const Results = ({ newEntry, scoreData, choSpecificHighscores }) => {
             </tr>
           </thead>
           <tbody>
-            {results.slice(0, 5).map(
+            {results.slice(0, 10).map(
               ({ username, score }) =>
                 score && (
                   <tr
@@ -31,7 +31,7 @@ const Results = ({ newEntry, scoreData, choSpecificHighscores }) => {
                     key={Math.random()}
                   >
                     <td>{username}</td>
-                    <td>{score}</td>
+                    <td>{score}km</td>
                   </tr>
                 )
             )}
@@ -58,7 +58,7 @@ const Results = ({ newEntry, scoreData, choSpecificHighscores }) => {
                     key={Math.random()}
                   >
                     <td>{username}</td>
-                    <td>{score}</td>
+                    <td>{score}km</td>
                   </tr>
                 )
             )}
@@ -69,6 +69,15 @@ const Results = ({ newEntry, scoreData, choSpecificHighscores }) => {
         {`
           container {
             display: flex;
+          }
+          thead > tr {
+            background: #ccc;
+          }
+          tr:nth-child(even) {
+            background: #ccc;
+          }
+          tr:nth-child(odd) {
+            background: #fff;
           }
         `}
       </style>

@@ -7,7 +7,7 @@ const viewBoxHeight = 460;
 
 const viewBox = `0 0 ${viewBoxWidth} ${viewBoxHeight}`;
 
-export function Stage({ children, width }) {
+export function Stage({ children, width, loading }) {
   const svgRef = useRef(null);
   const [svg, setSvg] = useState(null);
   useEffect(() => setSvg(svgRef.current), []);
@@ -19,6 +19,7 @@ export function Stage({ children, width }) {
         {`
           svg {
             background-color: cornflowerblue;
+            cursor: ${loading ? "wait" : "pointer"};
           }
         `}
       </style>
