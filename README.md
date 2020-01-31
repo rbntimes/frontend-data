@@ -6,6 +6,12 @@ De applicatie
 ![Vergelijken](https://github.com/rbntimes/frontend-data/wiki/static/comparing.png)
 Het scoren
 
+[Live link](https://robin.amsterdam/projects/2) (klik op demo)
+
+[Live link github pages](https://rbntimes.github.io/frontend-data)
+
+[Wiki](https://github.com/rbntimes/frontend-data/wiki)
+
 ## Mijn concept
 
 Dit concept is gebaseerd op een talk van [Bert Spaan](https://github.com/bertspaan) en zijn versie van [Waar ben ik](bertspaan.nl/waar-ben-ik).
