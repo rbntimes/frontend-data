@@ -66,6 +66,7 @@ class Map extends React.Component {
       d3.select(`#${marker[0].landLabel.value}`).attr("fill", "green");
     }
 
+    console.log(marker);
     // Use clientPoint to check where user clicked and invert it againt projection
     // https://stackoverflow.com/questions/48083536/react-v16-d3-v4-when-using-mouse-from-d3-selection-will-get-typeerror-cannot
     const userClickCoordinations = projection.invert(
